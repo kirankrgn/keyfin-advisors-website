@@ -8,6 +8,7 @@ import {
   Users, 
   BarChart3, 
   PieChart, 
+  Calculator,
   Target,
   Phone,
   Mail,
@@ -218,7 +219,7 @@ const ServicesSection = () => {
       features: ["Executive CFO Services", "Financial Reporting", "Compliance Management", "Operational Support"]
     },
     {
-      icon: calculator,
+      icon: Calculator,
       title: "Tax planning, structuring & Filings",
       description: "Comprehensive tax advisory solutions to optimize liabilities, ensure compliance, and align with business goals through strategic structuring and efficient filing processes.",
       features: ["Income & Corporate Tax Planning", "Business Structuring for Tax Efficiency", "GST, IEC & Other Tax Compliance", "Accurate & Timely Tax Filings"]
