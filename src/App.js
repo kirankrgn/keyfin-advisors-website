@@ -218,7 +218,7 @@ const ServicesSection = () => {
       features: ["Executive CFO Services", "Financial Reporting", "Compliance Management", "Operational Support"]
     },
     {
-      icon: caluclator,
+      icon: calculator,
       title: "Tax planning, structuring & Filings",
       description: "Comprehensive tax advisory solutions to optimize liabilities, ensure compliance, and align with business goals through strategic structuring and efficient filing processes.",
       features: ["Income & Corporate Tax Planning", "Business Structuring for Tax Efficiency", "GST, IEC & Other Tax Compliance", "Accurate & Timely Tax Filings"]
@@ -719,6 +719,7 @@ const Footer = () => {
               <li><a href="#" className="hover:text-white transition-colors">Capital Raising</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Strategic Advisory</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Financial Planning</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Tax Planning</a></li>
             </ul>
           </div>
           
