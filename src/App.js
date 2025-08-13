@@ -719,8 +719,9 @@ const Footer = () => {
               <li><a href="#" className="hover:text-white transition-colors">M&A Advisory</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Capital Raising</a></li>
               <li><a href="#" className="hover:text-white transition-colors">Strategic Advisory</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Financial Planning</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Tax Planning</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Business Support Services</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Financial Planning & Analysis</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Tax Planning & Filings</a></li>
             </ul>
           </div>
           
