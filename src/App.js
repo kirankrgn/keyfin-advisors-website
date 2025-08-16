@@ -352,37 +352,80 @@ const ClientsSection = () => {
   );
 };
 
-{/* About Section */}
-<section id="about" className="py-16 bg-gray-50 text-gray-800">
-  <div className="max-w-6xl mx-auto px-6">
-    <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">About Us</h2>
-    <p className="text-lg leading-relaxed text-center max-w-3xl mx-auto">
-      At <span className="font-semibold text-[#0B2545]">KeyFin Advisors</span>, we are dedicated to
-      helping businesses and entrepreneurs make smarter financial decisions. With deep expertise in
-      transaction advisory, fundraising, and strategic finance, we act as trusted partners to guide
-      you through every critical stage of growth.  
-    </p>
+// About Section Component
+const AboutSection = () => {
+  return (
+    <section id="about" className="py-20 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <h2 className="text-4xl sm:text-5xl font-bold text-charcoal-900 mb-6 font-serif">
+            About <span className="gradient-text">KeyFin Advisors</span>
+          </h2>
+          <p className="text-xl text-charcoal-600 max-w-4xl mx-auto leading-relaxed">
+            At <span className="font-semibold text-primary-900">KeyFin Advisors</span>, we are dedicated to 
+            helping businesses and entrepreneurs make smarter financial decisions. With deep expertise in 
+            transaction advisory, fundraising, and strategic finance, we act as trusted partners to guide 
+            you through every critical stage of growth.
+          </p>
+        </motion.div>
 
-    {/* Why Us Subsection */}
-    <div className="mt-12">
-      <h3 className="text-2xl font-semibold text-center text-gray-900 mb-6">Why Choose Us</h3>
-      <ul className="grid gap-6 md:grid-cols-3 text-center">
-        <li className="p-6 bg-white rounded-2xl shadow-md hover:shadow-lg transition">
-          <h4 className="font-semibold mb-2 text-[#0B2545]">Expertise</h4>
-          <p>Proven track record across fundraising, financial modeling, and strategic advisory.</p>
-        </li>
-        <li className="p-6 bg-white rounded-2xl shadow-md hover:shadow-lg transition">
-          <h4 className="font-semibold mb-2 text-[#0B2545]">Tailored Solutions</h4>
-          <p>We design strategies specific to your company’s growth stage and needs.</p>
-        </li>
-        <li className="p-6 bg-white rounded-2xl shadow-md hover:shadow-lg transition">
-          <h4 className="font-semibold mb-2 text-[#0B2545]">Trusted Partnership</h4>
-          <p>We work as your extended finance team, ensuring long-term success.</p>
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
+        {/* Why Choose Us Subsection */}
+        <motion.div 
+          className="mt-16"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
+          <h3 className="text-3xl font-bold text-center text-charcoal-900 mb-12 font-serif">
+            Why Choose <span className="gradient-text">Us</span>
+          </h3>
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Proven Expertise",
+                description: "Proven track record across fundraising, financial modeling, and strategic advisory with deep industry knowledge."
+              },
+              {
+                title: "Tailored Solutions", 
+                description: "We design strategies specific to your company's growth stage and needs, ensuring optimal outcomes."
+              },
+              {
+                title: "Trusted Partnership",
+                description: "We work as your extended finance team, ensuring long-term success through dedicated support."
+              }
+            ].map((item, index) => (
+              <motion.div
+                key={item.title}
+                className="bg-white p-8 rounded-xl shadow-professional hover:shadow-elevated transition-all duration-300 hover-lift text-center"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-primary-100 to-primary-200 rounded-lg flex items-center justify-center mx-auto mb-6">
+                  <Award className="w-8 h-8 text-primary-700" />
+                </div>
+                <h4 className="text-xl font-semibold mb-4 text-primary-900 font-serif">
+                  {item.title}
+                </h4>
+                <p className="text-charcoal-600 leading-relaxed">
+                  {item.description}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
 
 // Team Section Component
 const TeamSection = () => {
@@ -772,6 +815,7 @@ export default function App() {
             <HeroSection />
             <ServicesSection />
             <ClientsSection />
+            <AboutSection />
             <TeamSection />
             <InsightsSection />
             <ContactSection />
