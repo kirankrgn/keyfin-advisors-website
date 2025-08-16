@@ -258,14 +258,7 @@ const ServicesSection = () => {
                   ))}
                 </div>
               </div>
-              
-              <motion.button 
-                className="text-primary-700 font-semibold flex items-center group text-sm"
-                whileHover={{ x: 5 }}
-              >
-                Learn More
-                <ArrowRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </motion.button>
+                            
             </motion.div>
           ))}
         </div>
