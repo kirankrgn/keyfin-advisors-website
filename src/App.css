@@ -1,10 +1,5 @@
 /* App.css - Additional component styles */
 
-/* Smooth scroll for anchor links */
-html {
-  scroll-behavior: smooth;
-}
-
 /* Ensure smooth transitions */
 * {
   transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
@@ -43,8 +38,12 @@ select:focus {
 
 /* Loading animation */
 @keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.5; }
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
 }
 
 .animate-pulse {
