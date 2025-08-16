@@ -696,12 +696,9 @@ const Footer = () => {
           <div>
             <h4 className="font-semibold mb-4 font-serif">Services</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-white transition-colors">M&A Advisory</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Capital Raising</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Strategic Advisory</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Business Support Services</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Financial Planning & Analysis</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Tax Planning & Filings</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">M&A, Capital Raising & Transaction Advisory</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Strategic Advisory & Management Consulting</a></li>
+              <li><a href="#" className="hover:text-white transition-colors">Virtual CFO & Business Support Services</a></li>
             </ul>
           </div>
           
