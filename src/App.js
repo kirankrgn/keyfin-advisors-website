@@ -352,57 +352,55 @@ const ClientsSection = () => {
   );
 };
 
-{/* About Us Section */}
-<section id="about" className="py-20 bg-gray-50">
-  <div className="container mx-auto text-center px-6">
-    <h2 className="text-4xl font-bold text-gray-800 mb-6">About Us</h2>
-    <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-      At <span className="font-semibold text-blue-600">KeyFin Advisors</span>, we work alongside founders, corporates, family offices, and professional investors as their extended finance partner. 
-      We understand the challenges of building and scaling a business, and our goal is to make finance simple so you can stay focused on growth.
-    </p>
-    <p className="text-lg text-gray-600 max-w-3xl mx-auto mt-4 leading-relaxed">
-      From fundraising support and strategic advisory to day-to-day financial management, we bring the right mix of expertise and practical solutions 
-      to keep you compliant, enable smarter decisions, and give you clarity at every stage.
-    </p>
-  </div>
-</section>
+// App.js
+function App() {
+  return (
+    <div>
+      {/* Navbar */}
+      <nav className="p-4 shadow-md bg-white fixed w-full top-0 z-10">
+        <ul className="flex gap-6 justify-center">
+          <li><a href="#about" className="hover:text-blue-600">About</a></li>
+          <li><a href="#services" className="hover:text-blue-600">Services</a></li>
+          <li><a href="#contact" className="hover:text-blue-600">Contact</a></li>
+        </ul>
+      </nav>
 
-{/* Why Us Section */}
-<section id="whyus" className="py-20 bg-white">
-  <div className="container mx-auto px-6">
-    <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">Why Us</h2>
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-      
-      {/* Expertise */}
-      <div className="flex flex-col items-center text-center">
-        <i className="fas fa-user-tie text-blue-600 text-5xl mb-4"></i>
-        <h3 className="text-xl font-semibold mb-2">Expertise</h3>
-        <p className="text-gray-600">
-          Chartered Accountants and finance professionals with hands-on experience across industries.
+      {/* Other sections like Hero/Header here */}
+
+      {/* About Section */}
+      <section id="about" className="min-h-screen p-10 bg-gray-50">
+        <h2 className="text-3xl font-bold mb-4">About Us</h2>
+        <p>
+          At KeyFin Advisors, we work alongside founders, corporates, family offices,
+          and professional investors as their extended finance partner...
         </p>
-      </div>
 
-      {/* Partner Approach */}
-      <div className="flex flex-col items-center text-center">
-        <i className="fas fa-handshake text-blue-600 text-5xl mb-4"></i>
-        <h3 className="text-xl font-semibold mb-2">Partner Approach</h3>
-        <p className="text-gray-600">
-          We work as an extension of your team — flexible, approachable, and aligned to your goals.
-        </p>
-      </div>
+        {/* Why Us inside About */}
+        <div className="mt-10">
+          <h3 className="text-2xl font-semibold mb-2">Why Us</h3>
+          <p>
+            From fundraising support and strategic advisory to day-to-day financial
+            management, we bring the right mix of expertise...
+          </p>
+        </div>
+      </section>
 
-      {/* Growth Focus */}
-      <div className="flex flex-col items-center text-center">
-        <i className="fas fa-chart-line text-blue-600 text-5xl mb-4"></i>
-        <h3 className="text-xl font-semibold mb-2">Growth Focus</h3>
-        <p className="text-gray-600">
-          Our solutions simplify finance so you can focus on scaling your business with clarity.
-        </p>
-      </div>
+      {/* Example Services Section */}
+      <section id="services" className="min-h-screen p-10 bg-white">
+        <h2 className="text-3xl font-bold mb-4">Our Services</h2>
+        {/* Your services content here */}
+      </section>
 
+      {/* Contact Section */}
+      <section id="contact" className="min-h-screen p-10 bg-gray-50">
+        <h2 className="text-3xl font-bold mb-4">Contact Us</h2>
+        {/* Your contact form or details */}
+      </section>
     </div>
-  </div>
-</section>
+  );
+}
+
+export default App;
 
 // Team Section Component
 const TeamSection = () => {
