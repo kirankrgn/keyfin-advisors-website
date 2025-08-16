@@ -400,8 +400,6 @@ function App() {
   );
 }
 
-export default App;
-
 // Team Section Component
 const TeamSection = () => {
   const teamMembers = [
