@@ -352,51 +352,41 @@ const ClientsSection = () => {
   );
 };
 
-// App.js
-function App() {
+function AboutSection() {
   return (
-    <div>
-      {/* Navbar */}
-      <nav className="p-4 shadow-md bg-white fixed w-full top-0 z-10">
-        <ul className="flex gap-6 justify-center">
-          <li><a href="#about" className="hover:text-blue-600">About</a></li>
-          <li><a href="#services" className="hover:text-blue-600">Services</a></li>
-          <li><a href="#contact" className="hover:text-blue-600">Contact</a></li>
-        </ul>
-      </nav>
-
-      {/* Other sections like Hero/Header here */}
-
-      {/* About Section */}
-      <section id="about" className="min-h-screen p-10 bg-gray-50">
-        <h2 className="text-3xl font-bold mb-4">About Us</h2>
-        <p>
-          At KeyFin Advisors, we work alongside founders, corporates, family offices,
-          and professional investors as their extended finance partner...
+    <section id="about" className="py-20 bg-white">
+      <div className="max-w-6xl mx-auto px-6 lg:px-8 text-center">
+        <h2 className="text-3xl font-bold mb-6">About Us</h2>
+        <p className="text-lg text-gray-700 mb-4">
+          At KeyFin Advisors, we work alongside founders, corporates, family offices, and professional investors as their extended finance partner. We understand the challenges of building and scaling a business, and our goal is to make finance simple so you can stay focused on growth.
+        </p>
+        <p className="text-lg text-gray-700 mb-8">
+          From fundraising support and strategic advisory to day-to-day financial management, we bring the right mix of expertise and practical solutions to keep you compliant, enable smarter decisions, and give you clarity at every stage.
         </p>
 
-        {/* Why Us inside About */}
-        <div className="mt-10">
-          <h3 className="text-2xl font-semibold mb-2">Why Us</h3>
-          <p>
-            From fundraising support and strategic advisory to day-to-day financial
-            management, we bring the right mix of expertise...
-          </p>
+        {/* Why Us content included inside About */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mt-12">
+          <div className="p-6 bg-gray-50 rounded-2xl shadow-md">
+            <h3 className="text-xl font-semibold mb-3">Tailored Approach</h3>
+            <p className="text-gray-600">
+              We understand that every client is unique and provide solutions customized to your business needs.
+            </p>
+          </div>
+          <div className="p-6 bg-gray-50 rounded-2xl shadow-md">
+            <h3 className="text-xl font-semibold mb-3">End-to-End Expertise</h3>
+            <p className="text-gray-600">
+              From compliance to growth strategy, we cover the entire financial journey so you have one trusted partner.
+            </p>
+          </div>
+          <div className="p-6 bg-gray-50 rounded-2xl shadow-md">
+            <h3 className="text-xl font-semibold mb-3">Clarity & Confidence</h3>
+            <p className="text-gray-600">
+              We simplify finance, giving you the clarity to make confident decisions and focus on scaling your business.
+            </p>
+          </div>
         </div>
-      </section>
-
-      {/* Example Services Section */}
-      <section id="services" className="min-h-screen p-10 bg-white">
-        <h2 className="text-3xl font-bold mb-4">Our Services</h2>
-        {/* Your services content here */}
-      </section>
-
-      {/* Contact Section */}
-      <section id="contact" className="min-h-screen p-10 bg-gray-50">
-        <h2 className="text-3xl font-bold mb-4">Contact Us</h2>
-        {/* Your contact form or details */}
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }
 
