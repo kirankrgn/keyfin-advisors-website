@@ -373,10 +373,10 @@ const ClientsSection = () => {
     <h2 class="text-3xl font-bold text-gray-800 mb-6">Why Us</h2>
     <div class="grid md:grid-cols-3 gap-8">
 
-      <!-- Card 1 -->
-      <div class="p-6 rounded-xl shadow-lg bg-gray-50">
+      {/* Card 1 */}
+      {/* Adjust icon size/color as needed */}
         <div class="flex justify-center mb-4">
-          <!-- Adjust icon size/color as needed -->
+          {/* Adjust icon size/color as needed */}
           <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m2 0a2 2 0 100-4 2 2 0 000 4zM5 12a2 2 0 114 0 2 2 0 01-4 0z" />
           </svg>
@@ -385,7 +385,7 @@ const ClientsSection = () => {
         <p class="text-gray-600">We understand that no two businesses are the same. Our solutions are customized to fit your unique goals and challenges.</p>
       </div>
 
-      <!-- Card 2 -->
+      {/* Card 2 */}
       <div class="p-6 rounded-xl shadow-lg bg-gray-50">
         <div class="flex justify-center mb-4">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -396,7 +396,7 @@ const ClientsSection = () => {
         <p class="text-gray-600">Beyond advice, we work as your extended finance team—helping implement processes, systems, and strategies that deliver results.</p>
       </div>
 
-      <!-- Card 3 -->
+      {/* Card 3 */}
       <div class="p-6 rounded-xl shadow-lg bg-gray-50">
         <div class="flex justify-center mb-4">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
