@@ -142,9 +142,9 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Strategic Financial
+            Driving Growth Through
             <span className="text-gold-500 block mt-2">
-              Advisory Excellence
+              Financial Intelligence
             </span>
           </motion.h1>
           
@@ -154,8 +154,8 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Delivering sophisticated financial advisory services to corporations, investors, 
-            and high-net-worth individuals across complex transactions and strategic initiatives.
+            We partner with founders, investors, and businesses to deliver expert M&A, fundraising,  
+            and CFO solutions that accelerate growth and ensure lasting value.
           </motion.p>
           
           <motion.div 
@@ -190,40 +190,22 @@ const ServicesSection = () => {
   const services = [
     {
       icon: TrendingUp,
-      title: "Mergers & Acquisitions Advisory",
-      description: "Comprehensive M&A advisory services including strategic planning, due diligence, valuation analysis, and transaction execution for complex corporate transactions.",
-      features: ["Strategic Due Diligence", "Valuation & Modeling", "Transaction Structuring", "Regulatory Compliance"]
-    },
-    {
-      icon: BarChart3,
-      title: "Capital Raising & Structuring",
-      description: "Expert guidance on capital formation strategies, debt and equity structuring, and investor relations for growth-stage companies and established enterprises.",
-      features: ["Equity & Debt Capital", "Investment Banking", "Investor Relations", "Capital Structure Optimization"]
+      title: "M&A, Capital Raising & Transaction Advisory",
+      description: "End-to-end advisory for mergers, acquisitions, and fundraising, covering everything from strategy to successful deal closure",
+      features: ["Equity & Debt Fundraising", "Valuation & Financial Modelling", "Transaction Structuring & Negotiation", "Due Diligence & Regulatory Compliance", "Investor Relations & Communications"]
     },
     {
       icon: Target,
       title: "Strategic Advisory & Management Consulting",
-      description: "High-level strategic consulting services encompassing business transformation, operational excellence, and growth strategy development.",
-      features: ["Strategic Planning", "Business Transformation", "Operational Excellence", "Growth Strategy"]
-    },
-    {
-      icon: PieChart,
-      title: "Financial Planning & Analysis",
-      description: "Sophisticated financial modeling, forecasting, and analytical services to support critical business decisions and long-term planning initiatives.",
-      features: ["Financial Modeling", "Scenario Analysis", "Performance Metrics", "Strategic Forecasting"]
+      description: "Comprehensive strategic and financial consulting to accelerate business transformation, enhance operational efficiency, and ensure sustainable growth.",
+      features: ["Strategic Planning & Growth Initiatives", "Business Transformation & Process Efficiency", "Financial Modelling & Scenario Planning", "Market Research & Competitive Analysis", "Board & Executive-Level Reporting"]
     },
     {
       icon: Building2,
-      title: "Virtual CFO & Support Services",
-      description: "Executive-level financial leadership and comprehensive business support services including compliance, reporting, and operational finance management.",
-      features: ["Executive CFO Services", "Financial Reporting", "Compliance Management", "Operational Support"]
+      title: "Virtual CFO & Business Support Services",
+      description: "Complete Virtual CFO services and tax advisory to ensure compliance, optimize structures, and strengthen financial operations.",
+      features: ["Virtual CFO & Financial Leadership", "Budgeting, Forecasting & Cash Flow Management", "Financial Reporting, Compliance & Operations", "Tax Planning & Structuring", "Investor & Stakeholder Communication"]
     },
-    {
-      icon: Calculator,
-      title: "Tax planning, structuring & Filings",
-      description: "Comprehensive tax advisory solutions to optimize liabilities, ensure compliance, and align with business goals through strategic structuring and efficient filing processes.",
-      features: ["Income & Corporate Tax Planning", "Business Structuring for Tax Efficiency", "GST, IEC & Other Tax Compliance", "Accurate & Timely Tax Filings"]
-    }
   ];
 
   return (
@@ -659,11 +641,9 @@ const ContactSection = () => {
                 <label className="block text-charcoal-900 font-medium mb-2">Service Interest</label>
                 <select className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-primary-500 transition-colors">
                   <option value="">Select a service</option>
-                  <option value="ma">M&A Advisory</option>
-                  <option value="capital">Capital Raising</option>
-                  <option value="strategic">Strategic Advisory</option>
-                  <option value="financial">Financial Planning</option>
-                  <option value="cfo">Virtual CFO Services</option>
+                  <option value="ma">M&A, Capital Raising & Transaction Advisory</option>
+                  <option value="strategic">Strategic Advisory & Management Consulting</option>
+                  <option value="cfo">Virtual CFO & Business Support Services</option>
                 </select>
               </div>
               
