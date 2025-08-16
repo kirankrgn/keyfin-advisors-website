@@ -352,7 +352,7 @@ const ClientsSection = () => {
   );
 };
 
-<!-- About Us Section -->
+{/* About Us Section */}
 <section id="about" class="py-16 bg-gray-50">
   <div class="max-w-6xl mx-auto px-6 text-center">
     <h2 class="text-3xl font-bold text-gray-800 mb-6">About Us</h2>
@@ -367,7 +367,7 @@ const ClientsSection = () => {
   </div>
 </section>
 
-<!-- Why Us Section -->
+{/* Why Us Section */}
 <section id="why-us" class="py-16 bg-white">
   <div class="max-w-6xl mx-auto px-6 text-center">
     <h2 class="text-3xl font-bold text-gray-800 mb-6">Why Us</h2>
