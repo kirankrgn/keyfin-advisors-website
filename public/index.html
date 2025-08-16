@@ -4,12 +4,25 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#0B2545" />
-    <meta name="description" content="KeyFin Advisors - Strategic Financial Advisory Services | M&A Advisory, Capital Raising, Strategic Consulting for Corporations and High-Net-Worth Individuals" />
-    <meta name="keywords" content="financial advisory, M&A advisory, capital raising, strategic consulting, chartered accountant, investment banking, Bangalore" />
+    <meta name="description" content="KeyFin Advisors - Strategic Financial Advisory Services" />
     <title>KeyFin Advisors - Strategic Financial Advisory Services</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    
+    <!-- Netlify Forms Detection -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="firstName" />
+      <input type="text" name="lastName" />
+      <input type="email" name="email" />
+      <select name="service">
+        <option value="">Select a service</option>
+        <option value="ma">M&A, Capital Raising & Transaction Advisory</option>
+        <option value="strategic">Strategic Advisory & Management Consulting</option>
+        <option value="cfo">Virtual CFO & Business Support Services</option>
+      </select>
+      <textarea name="message"></textarea>
+    </form>
   </body>
 </html>
