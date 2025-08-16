@@ -353,61 +353,55 @@ const ClientsSection = () => {
 };
 
 {/* About Us Section */}
-<section id="about" class="py-16 bg-gray-50">
-  <div class="max-w-6xl mx-auto px-6 text-center">
-    <h2 class="text-3xl font-bold text-gray-800 mb-6">About Us</h2>
-    <p class="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
-      At KeyFin Advisors, we work alongside founders, corporates, family offices, and professional investors as their extended finance partner. 
+<section id="about" className="py-20 bg-gray-50">
+  <div className="container mx-auto text-center px-6">
+    <h2 className="text-4xl font-bold text-gray-800 mb-6">About Us</h2>
+    <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+      At <span className="font-semibold text-blue-600">KeyFin Advisors</span>, we work alongside founders, corporates, family offices, and professional investors as their extended finance partner. 
       We understand the challenges of building and scaling a business, and our goal is to make finance simple so you can stay focused on growth.
     </p>
-    <p class="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto mt-4">
-      From fundraising support and strategic advisory to day-to-day financial management, we bring the right mix of expertise and practical 
-      solutions to keep you compliant, enable smarter decisions, and give you clarity at every stage.
+    <p className="text-lg text-gray-600 max-w-3xl mx-auto mt-4 leading-relaxed">
+      From fundraising support and strategic advisory to day-to-day financial management, we bring the right mix of expertise and practical solutions 
+      to keep you compliant, enable smarter decisions, and give you clarity at every stage.
     </p>
   </div>
 </section>
 
 {/* Why Us Section */}
-<section id="why-us" class="py-16 bg-white">
-  <div class="max-w-6xl mx-auto px-6 text-center">
-    <h2 class="text-3xl font-bold text-gray-800 mb-6">Why Us</h2>
-    <div class="grid md:grid-cols-3 gap-8">
-
-      {/* Card 1 */}
-      {/* Adjust icon size/color as needed */}
-        <div class="flex justify-center mb-4">
-          {/* Adjust icon size/color as needed */}
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m2 0a2 2 0 100-4 2 2 0 000 4zM5 12a2 2 0 114 0 2 2 0 01-4 0z" />
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold text-gray-700 mb-3">Tailored Approach</h3>
-        <p class="text-gray-600">We understand that no two businesses are the same. Our solutions are customized to fit your unique goals and challenges.</p>
+<section id="whyus" className="py-20 bg-white">
+  <div className="container mx-auto px-6">
+    <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">Why Us</h2>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+      
+      {/* Expertise */}
+      <div className="flex flex-col items-center text-center">
+        <i className="fas fa-user-tie text-blue-600 text-5xl mb-4"></i>
+        <h3 className="text-xl font-semibold mb-2">Expertise</h3>
+        <p className="text-gray-600">
+          Chartered Accountants and finance professionals with hands-on experience across industries.
+        </p>
       </div>
 
-      {/* Card 2 */}
-      <div class="p-6 rounded-xl shadow-lg bg-gray-50">
-        <div class="flex justify-center mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2h6v2m-6 0a2 2 0 100 4 2 2 0 000-4zm6 0a2 2 0 100 4 2 2 0 000-4zM9 5v2h6V5m-6 0a2 2 0 100-4 2 2 0 000 4zm6 0a2 2 0 100-4 2 2 0 000 4z" />
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold text-gray-700 mb-3">Hands-On Support</h3>
-        <p class="text-gray-600">Beyond advice, we work as your extended finance team—helping implement processes, systems, and strategies that deliver results.</p>
+      {/* Partner Approach */}
+      <div className="flex flex-col items-center text-center">
+        <i className="fas fa-handshake text-blue-600 text-5xl mb-4"></i>
+        <h3 className="text-xl font-semibold mb-2">Partner Approach</h3>
+        <p className="text-gray-600">
+          We work as an extension of your team — flexible, approachable, and aligned to your goals.
+        </p>
       </div>
 
-      {/* Card 3 */}
-      <div class="p-6 rounded-xl shadow-lg bg-gray-50">
-        <div class="flex justify-center mb-4">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3-1.343 3-3S13.657 2 12 2 9 3.343 9 5s1.343 3 3 3zm0 2a9 9 0 00-9 9v1h18v-1a9 9 0 00-9-9z" />
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold text-gray-700 mb-3">Proven Expertise</h3>
-        <p class="text-gray-600">With experience across startups, growth companies, and investors, we bring insights that create value at every stage of your journey.</p>
+      {/* Growth Focus */}
+      <div className="flex flex-col items-center text-center">
+        <i className="fas fa-chart-line text-blue-600 text-5xl mb-4"></i>
+        <h3 className="text-xl font-semibold mb-2">Growth Focus</h3>
+        <p className="text-gray-600">
+          Our solutions simplify finance so you can focus on scaling your business with clarity.
+        </p>
       </div>
 
     </div>
+  </div>
 </section>
 
 // Team Section Component
