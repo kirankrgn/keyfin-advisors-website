@@ -408,7 +408,6 @@ const ClientsSection = () => {
       </div>
 
     </div>
-  </div>
 </section>
 
 // Team Section Component
