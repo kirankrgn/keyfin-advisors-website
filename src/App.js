@@ -197,7 +197,7 @@ const ServicesSection = () => {
     {
       icon: Target,
       title: "Strategic Advisory & Management Consulting",
-      description: "Comprehensive strategic and financial consulting to accelerate business transformation, enhance operational efficiency, and ensure sustainable growth.",
+      description: "In-depth strategic and financial consulting to accelerate business transformation, enhance operational efficiency, and ensure sustainable growth.",
       features: ["Strategic Planning & Growth Initiatives", "Business Transformation & Process Efficiency", "Financial Modelling & Scenario Planning", "Market Research & Competitive Analysis", "Board & Executive-Level Reporting"]
     },
     {
@@ -674,24 +674,34 @@ const ContactSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <form className="bg-gray-50 rounded-xl p-8 shadow-professional">
+            <form 
+              name="contact" 
+              method="POST" 
+              data-netlify="true"
+              className="bg-gray-50 rounded-xl p-8 shadow-professional"
+            >
+              <input type="hidden" name="form-name" value="contact" />
               <h3 className="text-2xl font-bold text-charcoal-900 mb-6 font-serif">Send a Message</h3>
               
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 <div>
                   <label className="block text-charcoal-900 font-medium mb-2">First Name</label>
                   <input 
+                    name="firstName"
                     type="text" 
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-primary-500 transition-colors"
                     placeholder="Your first name"
+                    required
                   />
                 </div>
                 <div>
                   <label className="block text-charcoal-900 font-medium mb-2">Last Name</label>
                   <input 
+                    name="lastName"
                     type="text" 
                     className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-primary-500 transition-colors"
                     placeholder="Your last name"
+                    required
                   />
                 </div>
               </div>
@@ -699,15 +709,21 @@ const ContactSection = () => {
               <div className="mb-6">
                 <label className="block text-charcoal-900 font-medium mb-2">Email</label>
                 <input 
+                  name="email"
                   type="email" 
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-primary-500 transition-colors"
                   placeholder="your@email.com"
+                  required
                 />
               </div>
               
               <div className="mb-6">
                 <label className="block text-charcoal-900 font-medium mb-2">Service Interest</label>
-                <select className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-primary-500 transition-colors">
+                <select 
+                  name="service"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-primary-500 transition-colors"
+                  required
+                >
                   <option value="">Select a service</option>
                   <option value="ma">M&A, Capital Raising & Transaction Advisory</option>
                   <option value="strategic">Strategic Advisory & Management Consulting</option>
@@ -718,20 +734,20 @@ const ContactSection = () => {
               <div className="mb-6">
                 <label className="block text-charcoal-900 font-medium mb-2">Message</label>
                 <textarea 
+                  name="message"
                   rows="4"
                   className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-primary-500 transition-colors resize-none"
                   placeholder="Please describe your requirements..."
+                  required
                 ></textarea>
               </div>
               
-              <motion.button 
+              <button 
                 type="submit"
                 className="w-full bg-primary-800 text-white py-3 rounded-lg font-semibold hover:bg-primary-900 transition-colors shadow-professional"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
               >
                 Send Message
-              </motion.button>
+              </button>
             </form>
           </motion.div>
         </div>
