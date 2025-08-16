@@ -352,49 +352,37 @@ const ClientsSection = () => {
   );
 };
 
-{/* ================= ABOUT SECTION ================= */}
-<section id="about" className="py-20 bg-gray-50">
-  <div className="max-w-6xl mx-auto px-6 text-center">
-    <h2 className="text-3xl font-bold text-gray-800 mb-6">About Us</h2>
-    <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto mb-12">
-      At <span className="font-semibold">KeyFin Advisors</span>, we specialize in
-      transaction advisory, fundraising support, and financial modeling for
-      early-stage and growth-stage companies. With proven expertise in deal
-      execution and financial strategy, we help businesses unlock growth,
-      navigate complex transactions, and achieve long-term success.
+{/* About Section */}
+<section id="about" className="py-16 bg-gray-50 text-gray-800">
+  <div className="max-w-6xl mx-auto px-6">
+    <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">About Us</h2>
+    <p className="text-lg leading-relaxed text-center max-w-3xl mx-auto">
+      At <span className="font-semibold text-[#0B2545]">KeyFin Advisors</span>, we are dedicated to
+      helping businesses and entrepreneurs make smarter financial decisions. With deep expertise in
+      transaction advisory, fundraising, and strategic finance, we act as trusted partners to guide
+      you through every critical stage of growth.  
     </p>
 
-    {/* WHY US Subsection */}
-    <h3 className="text-2xl font-semibold text-gray-800 mb-6">Why Us</h3>
-    <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-      <div className="bg-white p-6 rounded-2xl shadow-md">
-        <div className="text-4xl mb-4">⚡</div>
-        <h4 className="text-xl font-semibold mb-2">Expert Execution</h4>
-        <p className="text-gray-600">
-          Deep experience in fundraising, M&A, and financial structuring with a
-          hands-on approach.
-        </p>
-      </div>
-      <div className="bg-white p-6 rounded-2xl shadow-md">
-        <div className="text-4xl mb-4">🤝</div>
-        <h4 className="text-xl font-semibold mb-2">Trusted Partner</h4>
-        <p className="text-gray-600">
-          We work closely with founders, investors, and stakeholders to deliver
-          outcomes aligned with your goals.
-        </p>
-      </div>
-      <div className="bg-white p-6 rounded-2xl shadow-md">
-        <div className="text-4xl mb-4">📈</div>
-        <h4 className="text-xl font-semibold mb-2">Growth Focused</h4>
-        <p className="text-gray-600">
-          Strategic insights and financial intelligence that enable businesses
-          to scale with confidence.
-        </p>
-      </div>
+    {/* Why Us Subsection */}
+    <div className="mt-12">
+      <h3 className="text-2xl font-semibold text-center text-gray-900 mb-6">Why Choose Us</h3>
+      <ul className="grid gap-6 md:grid-cols-3 text-center">
+        <li className="p-6 bg-white rounded-2xl shadow-md hover:shadow-lg transition">
+          <h4 className="font-semibold mb-2 text-[#0B2545]">Expertise</h4>
+          <p>Proven track record across fundraising, financial modeling, and strategic advisory.</p>
+        </li>
+        <li className="p-6 bg-white rounded-2xl shadow-md hover:shadow-lg transition">
+          <h4 className="font-semibold mb-2 text-[#0B2545]">Tailored Solutions</h4>
+          <p>We design strategies specific to your company’s growth stage and needs.</p>
+        </li>
+        <li className="p-6 bg-white rounded-2xl shadow-md hover:shadow-lg transition">
+          <h4 className="font-semibold mb-2 text-[#0B2545]">Trusted Partnership</h4>
+          <p>We work as your extended finance team, ensuring long-term success.</p>
+        </li>
+      </ul>
     </div>
   </div>
 </section>
-{/* ================= END ABOUT SECTION ================= */}
 
 // Team Section Component
 const TeamSection = () => {
