@@ -358,10 +358,10 @@ const AboutSection = () => {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-4xl sm:text-5xl font-bold text-charcoal-900 mb-6 font-serif">
-            About <span className="gradient-text">KeyFin Advisors</span>
+            About <span className="gradient-text">Us</span>
           </h2>
           <p className="text-xl text-charcoal-600 max-w-4xl mx-auto leading-relaxed">
-            At <span className="font-semibold text-primary-900">KeyFin Advisors</span>, we are dedicated to 
+            At <span className=>KeyFin Advisors</span>, we are dedicated to 
             helping businesses and entrepreneurs make smarter financial decisions. With deep expertise in 
             transaction advisory, fundraising, and strategic finance, we act as trusted partners to guide 
             you through every critical stage of growth.
