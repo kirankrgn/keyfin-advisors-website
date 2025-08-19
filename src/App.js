@@ -267,7 +267,7 @@ const ServicesSection = () => {
   );
 };
 
-// Clients Section Component - UPDATED VERSION
+// Clients Section Component - FIXED VERSION
 const ClientsSection = () => {
   const [activeFilter, setActiveFilter] = React.useState('All');
 
@@ -276,31 +276,23 @@ const ClientsSection = () => {
       name: "ABM Respiratory Care",
       sector: "Healthcare",
       services: "Transaction Advisory Services",
-      description: "Healthcare equipment manufacturer specializing in respiratory care solutions",
-      logo: "https://images.unsplash.com/photo-1496200186974-4293800e2c20?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwxfHxjb21wYW55JTIwbG9nb3N8ZW58MHx8fHwxNzU1NjMyMDk2fDA&ixlib=rb-4.1.0&q=85",
+      description: "Healthcare equipment manufacturer specializing in respiratory care solutions and medical device distribution",
+      logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/96id2chi_Logos.zip", // You'll need to upload individual logos
       website: "https://www.abmmedical.com"
     },
     {
       name: "Animo Tech",
       sector: "Technology",
       services: "Virtual CFO / Business Support Services",
-      description: "Technology solutions provider focused on digital transformation services",
+      description: "Technology solutions provider focused on digital transformation and innovative software development services",
       logo: "https://images.unsplash.com/photo-1662052955098-042b46e60c2b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwyfHxjb21wYW55JTIwbG9nb3N8ZW58MHx8fHwxNzU1NjMyMDk2fDA&ixlib=rb-4.1.0&q=85",
-      website: "https://animotech.in"
-    },
-    {
-      name: "Backpackers United",
-      sector: "Consumer",
-      services: "Virtual CFO / Business Support Services",
-      description: "Travel and adventure community platform connecting backpackers worldwide",
-      logo: "https://images.unsplash.com/photo-1662052955282-da15376f3919?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwzfHxjb21wYW55JTIwbG9nb3N8ZW58MHx8fHwxNzU1NjMyMDk2fDA&ixlib=rb-4.1.0&q=85",
-      website: "https://backpackersunited.in"
+      website: "https://getanimo.io"
     },
     {
       name: "The Stree Co.",
       sector: "Consumer",
       services: "Virtual CFO / Business Support Services",
-      description: "Women-focused brand creating sustainable and empowering products",
+      description: "Women-focused brand creating sustainable and empowering products for modern lifestyle needs",
       logo: "https://images.pexels.com/photos/7202944/pexels-photo-7202944.jpeg",
       website: "https://thestreeco.com"
     },
@@ -308,7 +300,7 @@ const ClientsSection = () => {
       name: "Jar",
       sector: "Financial Services",
       services: "Transaction Advisory Services",
-      description: "Digital savings and investment platform for everyday financial goals",
+      description: "Digital savings and investment platform enabling smart financial planning for everyday goals",
       logo: "https://images.unsplash.com/photo-1663124178647-24f30cedd1ba?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGxvZ29zfGVufDB8fHx8MTc1NTYzMjEwMnww&ixlib=rb-4.1.0&q=85",
       website: "https://jar.app"
     },
@@ -316,7 +308,7 @@ const ClientsSection = () => {
       name: "Detectwell Security",
       sector: "Others",
       services: "Transaction Advisory Services",
-      description: "Advanced security solutions and surveillance technology provider",
+      description: "Advanced security solutions and surveillance technology provider for commercial and residential applications",
       logo: "https://images.unsplash.com/photo-1663124178667-28b3776d7c15?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMGxvZ29zfGVufDB8fHx8MTc1NTYzMjEwMnww&ixlib=rb-4.1.0&q=85",
       website: "https://detectwellsecurity.com"
     },
@@ -324,7 +316,7 @@ const ClientsSection = () => {
       name: "DrinkPrime",
       sector: "Consumer",
       services: "Management Consulting",
-      description: "Smart water purification subscription service revolutionizing home water consumption",
+      description: "Smart water purification subscription service revolutionizing home water consumption with IoT technology",
       logo: "https://images.pexels.com/photos/12113816/pexels-photo-12113816.jpeg",
       website: "https://drinkprime.in"
     },
@@ -332,7 +324,7 @@ const ClientsSection = () => {
       name: "Genetic Nutrition",
       sector: "Consumer",
       services: "Transaction Advisory Services",
-      description: "Personalized nutrition and wellness solutions based on genetic profiling",
+      description: "Personalized nutrition and wellness solutions based on advanced genetic profiling and health analytics",
       logo: "https://images.pexels.com/photos/12602144/pexels-photo-12602144.jpeg",
       website: "https://geneticnutrition.in"
     },
@@ -340,7 +332,7 @@ const ClientsSection = () => {
       name: "Gilly's",
       sector: "Consumer",
       services: "Transaction Advisory Services",
-      description: "Premium food and beverage brand focused on artisanal products",
+      description: "Premium food and beverage brand focused on artisanal products and gourmet culinary experiences",
       logo: "https://images.unsplash.com/photo-1622465911368-72162f8da3e2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHw0fHxidXNpbmVzcyUyMGxvZ29zfGVufDB8fHx8MTc1NTYzMjEwMnww&ixlib=rb-4.1.0&q=85",
       website: "https://gillys.in"
     },
@@ -348,7 +340,7 @@ const ClientsSection = () => {
       name: "Hotelzify",
       sector: "Technology",
       services: "Transaction Advisory Services",
-      description: "Hotel management and booking technology platform for hospitality industry",
+      description: "Hotel management and booking technology platform streamlining hospitality industry operations",
       logo: "https://images.pexels.com/photos/10121376/pexels-photo-10121376.jpeg",
       website: "https://hotelzify.com"
     },
@@ -356,7 +348,7 @@ const ClientsSection = () => {
       name: "The Editorial Institute",
       sector: "Others",
       services: "Virtual CFO / Business Support Services",
-      description: "Content creation and editorial services for publishing and media industry",
+      description: "Content creation and editorial services for publishing, media, and digital content industries",
       logo: "https://images.unsplash.com/photo-1496200186974-4293800e2c20?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwxfHxjb21wYW55JTIwbG9nb3N8ZW58MHx8fHwxNzU1NjMyMDk2fDA&ixlib=rb-4.1.0&q=85",
       website: "https://editorialinstitute.org"
     },
@@ -364,7 +356,7 @@ const ClientsSection = () => {
       name: "Krishivan Tech",
       sector: "Others",
       services: "Transaction Advisory Services",
-      description: "Agricultural technology solutions focused on sustainable farming practices",
+      description: "Agricultural technology solutions focused on sustainable farming practices and precision agriculture",
       logo: "https://images.unsplash.com/photo-1662052955098-042b46e60c2b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwyfHxjb21wYW55JTIwbG9nb3N8ZW58MHx8fHwxNzU1NjMyMDk2fDA&ixlib=rb-4.1.0&q=85",
       website: "https://krishivantech.com"
     },
@@ -372,7 +364,7 @@ const ClientsSection = () => {
       name: "Origin Fresh",
       sector: "Consumer",
       services: "Transaction Advisory Services",
-      description: "Organic food and fresh produce supply chain management platform",
+      description: "Organic food and fresh produce supply chain management platform connecting farmers to consumers",
       logo: "https://images.unsplash.com/photo-1662052955282-da15376f3919?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwzfHxjb21wYW55JTIwbG9nb3N8ZW58MHx8fHwxNzU1NjMyMDk2fDA&ixlib=rb-4.1.0&q=85",
       website: "https://originfresh.in"
     },
@@ -380,7 +372,7 @@ const ClientsSection = () => {
       name: "Ridgetop Dental International",
       sector: "Healthcare",
       services: "Transaction Advisory Services",
-      description: "International dental care services and medical tourism facilitator",
+      description: "International dental care services and medical tourism facilitator providing world-class dental treatments",
       logo: "https://images.pexels.com/photos/7202944/pexels-photo-7202944.jpeg",
       website: "https://ridgetopdental.com"
     },
@@ -388,7 +380,7 @@ const ClientsSection = () => {
       name: "Zorp",
       sector: "Technology",
       services: "Transaction Advisory Services",
-      description: "No-code platform for building custom business applications and workflows",
+      description: "No-code platform for building custom business applications and automated workflow solutions",
       logo: "https://images.unsplash.com/photo-1663124178647-24f30cedd1ba?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGxvZ29zfGVufDB8fHx8MTc1NTYzMjEwMnww&ixlib=rb-4.1.0&q=85",
       website: "https://zorp.one"
     },
@@ -396,7 +388,7 @@ const ClientsSection = () => {
       name: "The Cambridge International School",
       sector: "Others",
       services: "Transaction Advisory Services",
-      description: "Premium international educational institution offering world-class curriculum",
+      description: "Premium international educational institution offering world-class curriculum and holistic development programs",
       logo: "https://images.unsplash.com/photo-1663124178667-28b3776d7c15?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMGxvZ29zfGVufDB8fHx8MTc1NTYzMjEwMnww&ixlib=rb-4.1.0&q=85",
       website: "https://cambridgeschool.edu.in"
     },
@@ -404,7 +396,7 @@ const ClientsSection = () => {
       name: "The Silly Fellows",
       sector: "Others",
       services: "Transaction Advisory Services",
-      description: "Creative content and entertainment production company",
+      description: "Creative content and entertainment production company specializing in digital media and storytelling",
       logo: "https://images.pexels.com/photos/12113816/pexels-photo-12113816.jpeg",
       website: "https://thesillyfellows.com"
     },
@@ -412,7 +404,7 @@ const ClientsSection = () => {
       name: "Bounce Infinity",
       sector: "Consumer",
       services: "Management Consulting",
-      description: "Electric vehicle mobility solutions and sustainable transportation platform",
+      description: "Electric vehicle mobility solutions and sustainable transportation platform for urban commuting",
       logo: "https://images.pexels.com/photos/12602144/pexels-photo-12602144.jpeg",
       website: "https://bounceinfinity.com"
     }
@@ -471,58 +463,47 @@ const ClientsSection = () => {
           {filteredClients.map((client, index) => (
             <motion.div
               key={client.name}
-              className="flip-card-small h-48 group"
+              className="client-card h-48 group"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.05 }}
             >
-              <motion.div
-                className="flip-card-inner-small cursor-pointer"
+              <div
+                className="client-card-inner cursor-pointer"
                 onDoubleClick={() => handleCardDoubleClick(client.website)}
-                whileHover={{ scale: 1.02 }}
               >
-                {/* Front Face - Logo */}
-                <div className="flip-card-front-small bg-white shadow-professional border border-gray-200 flex items-center justify-center p-4">
-                  <div className="text-center">
-                    <div className="w-16 h-16 mx-auto mb-3 flex items-center justify-center bg-gray-50 rounded-lg overflow-hidden">
-                      <img 
-                        src={client.logo} 
-                        alt={client.name}
-                        className="max-w-full max-h-full object-contain"
-                        onError={(e) => {
-                          e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(client.name)}&background=1e40af&color=ffffff&size=64`;
-                        }}
-                      />
-                    </div>
-                    <h3 className="text-sm font-semibold text-charcoal-900 font-serif leading-tight">
-                      {client.name}
-                    </h3>
-                    <p className="text-xs text-charcoal-500 mt-1">{client.sector}</p>
+                {/* Front Face - Logo Only */}
+                <div className="client-card-front bg-white shadow-professional border border-gray-200 flex items-center justify-center p-6">
+                  <div className="w-full h-full flex items-center justify-center">
+                    <img 
+                      src={client.logo} 
+                      alt={client.name}
+                      className="max-w-full max-h-full object-contain"
+                      style={{ maxWidth: '120px', maxHeight: '120px' }}
+                      onError={(e) => {
+                        e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(client.name)}&background=1e40af&color=ffffff&size=120`;
+                      }}
+                    />
                   </div>
                 </div>
 
-                {/* Back Face - Description */}
-                <div className="flip-card-back-small bg-gradient-to-br from-primary-700 to-primary-800 shadow-professional text-white p-4 flex flex-col justify-center">
+                {/* Back Face - Company Details */}
+                <div className="client-card-back bg-gradient-to-br from-primary-700 to-primary-800 shadow-professional text-white p-4 flex flex-col justify-center">
                   <div className="text-center">
-                    <h3 className="text-sm font-semibold mb-2 font-serif">{client.name}</h3>
-                    <div className="space-y-1 mb-3">
-                      <div className="inline-block px-2 py-1 bg-white/20 rounded-full text-xs font-medium">
-                        {client.sector}
-                      </div>
-                      <div className="inline-block px-2 py-1 bg-gold-500/20 rounded-full text-xs font-medium">
-                        {client.services}
-                      </div>
+                    <h3 className="text-base font-bold mb-2 font-serif leading-tight">{client.name}</h3>
+                    <div className="inline-block px-3 py-1 bg-white/20 rounded-full text-xs font-medium mb-3">
+                      {client.sector}
                     </div>
-                    <p className="text-xs leading-relaxed opacity-90">
+                    <p className="text-sm leading-relaxed opacity-90 mb-3">
                       {client.description}
                     </p>
-                    <div className="mt-2 text-xs opacity-75">
+                    <div className="text-xs opacity-75">
                       Double-click to visit website
                     </div>
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </motion.div>
           ))}
         </div>
