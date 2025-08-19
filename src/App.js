@@ -267,7 +267,7 @@ const ServicesSection = () => {
   );
 };
 
-// Clients Section Component - COMPLETE WITH ALL REAL LOGOS
+// Clients Section Component - WITH ALPHABETICAL SORTING
 const ClientsSection = () => {
   const [activeFilter, setActiveFilter] = React.useState('All');
 
@@ -275,136 +275,136 @@ const ClientsSection = () => {
     {
       name: "ABM Respiratory Care",
       sector: "Healthcare",
-      services: "Transaction Advisory Services",
-      description: "Healthcare equipment manufacturer specializing in respiratory care solutions and medical device distribution",
+      services: ["Transaction Advisory Services"],
+      description: "Description: To be updated",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/hg996il4_ABM.png",
       website: "https://www.abmmedical.com"
     },
     {
       name: "Animo Tech",
       sector: "Technology",
-      services: "Virtual CFO / Business Support Services",
-      description: "Technology solutions provider focused on digital transformation and innovative software development services",
+      services: ["Virtual CFO / Business Support Services"],
+      description: "Description: To be updated",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/yfm31ck6_Animo%20tech.jpg",
       website: "https://getanimo.io"
     },
     {
       name: "The Stree Co.",
       sector: "Consumer",
-      services: "Virtual CFO / Business Support Services",
-      description: "Women-focused brand creating sustainable and empowering products for modern lifestyle needs",
+      services: ["Virtual CFO / Business Support Services"],
+      description: "Description: To be updated",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/y3qzvss0_The%20Stree%20Co.png",
       website: "https://thestreeco.com"
     },
     {
       name: "Jar",
       sector: "Financial Services",
-      services: "Transaction Advisory Services",
-      description: "Digital savings and investment platform enabling smart financial planning for everyday goals",
+      services: ["Transaction Advisory Services", "Virtual CFO / Business Support Services"],
+      description: "Description: To be updated",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/uxzpg0a5_Jar.png",
       website: "https://jar.app"
     },
     {
       name: "Detectwell Security",
       sector: "Others",
-      services: "Transaction Advisory Services",
-      description: "Advanced security solutions and surveillance technology provider for commercial and residential applications",
+      services: ["Transaction Advisory Services", "Virtual CFO / Business Support Services"],
+      description: "Description: To be updated",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/axxhiu8c_DSS.png",
       website: "https://detectwellsecurity.com"
     },
     {
       name: "DrinkPrime",
       sector: "Consumer",
-      services: "Management Consulting",
-      description: "Smart water purification subscription service revolutionizing home water consumption with IoT technology",
+      services: ["Transaction Advisory Services", "Management Consulting"],
+      description: "Description: To be updated",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/g8dcpkmy_Drinkprime.png",
       website: "https://drinkprime.in"
     },
     {
       name: "Genetic Nutrition",
       sector: "Consumer",
-      services: "Transaction Advisory Services",
-      description: "Personalized nutrition and wellness solutions based on advanced genetic profiling and health analytics",
+      services: ["Transaction Advisory Services"],
+      description: "Description: To be updated",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/va68iptj_Genetic%20Nutrition.jpg",
       website: "https://geneticnutrition.in"
     },
     {
       name: "Gilly's",
       sector: "Consumer",
-      services: "Transaction Advisory Services",
-      description: "Premium food and beverage brand focused on artisanal products and gourmet culinary experiences",
+      services: ["Transaction Advisory Services"],
+      description: "Description: To be updated",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/94ttcy8b_Gillys.jpg",
       website: "https://gillys.in"
     },
     {
       name: "Hotelzify",
       sector: "Technology",
-      services: "Transaction Advisory Services",
-      description: "Hotel management and booking technology platform streamlining hospitality industry operations",
+      services: ["Transaction Advisory Services"],
+      description: "Description: To be updated",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/42d78i4s_Hotelzify.png",
       website: "https://hotelzify.com"
     },
     {
       name: "The Editorial Institute",
       sector: "Others",
-      services: "Virtual CFO / Business Support Services",
-      description: "Content creation and editorial services for publishing, media, and digital content industries",
+      services: ["Virtual CFO / Business Support Services"],
+      description: "Description: To be updated",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/yxnbkoy8_The%20editorial%20institute.jpg",
       website: "https://editorialinstitute.org"
     },
     {
       name: "Krishivan Tech",
       sector: "Others",
-      services: "Transaction Advisory Services",
-      description: "Agricultural technology solutions focused on sustainable farming practices and precision agriculture",
+      services: ["Transaction Advisory Services"],
+      description: "Description: To be updated",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/h04jgh0b_Krishivan%20Tech.jpg",
       website: "https://krishivantech.com"
     },
     {
       name: "Origin Fresh",
       sector: "Consumer",
-      services: "Transaction Advisory Services",
-      description: "Organic food and fresh produce supply chain management platform connecting farmers to consumers",
+      services: ["Transaction Advisory Services"],
+      description: "Description: To be updated",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/t8qearte_Origin%20Fresh.jpg",
       website: "https://originfresh.in"
     },
     {
       name: "Ridgetop Dental International",
       sector: "Healthcare",
-      services: "Transaction Advisory Services",
-      description: "International dental care services and medical tourism facilitator providing world-class dental treatments",
+      services: ["Transaction Advisory Services"],
+      description: "Description: To be updated",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/8j2pn6xw_RDI.png",
       website: "https://ridgetopdental.com"
     },
     {
       name: "Zorp",
       sector: "Technology",
-      services: "Transaction Advisory Services",
-      description: "No-code platform for building custom business applications and automated workflow solutions",
+      services: ["Transaction Advisory Services", "Virtual CFO / Business Support Services"],
+      description: "Description: To be updated",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/ywiuimhh_Zorp.png",
       website: "https://zorp.one"
     },
     {
       name: "The Cambridge International School",
       sector: "Others",
-      services: "Transaction Advisory Services",
-      description: "Premium international educational institution offering world-class curriculum and holistic development programs",
+      services: ["Transaction Advisory Services"],
+      description: "Description: To be updated",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/w0dmng9r_TCIS.png",
       website: "https://cambridgeschool.edu.in"
     },
     {
       name: "The Silly Fellows",
       sector: "Others",
-      services: "Transaction Advisory Services",
-      description: "Creative content and entertainment production company specializing in digital media and storytelling",
+      services: ["Transaction Advisory Services", "Virtual CFO / Business Support Services"],
+      description: "Description: To be updated",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/e3bnqbat_The%20Silly%20Fellows.png",
       website: "https://thesillyfellows.com"
     },
     {
       name: "Bounce Infinity",
       sector: "Consumer",
-      services: "Management Consulting",
-      description: "Electric vehicle mobility solutions and sustainable transportation platform for urban commuting",
+      services: ["Transaction Advisory Services", "Management Consulting"],
+      description: "Description: To be updated",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/n32h7zh3_Bounce.jpg",
       website: "https://bounceinfinity.com"
     }
@@ -412,9 +412,11 @@ const ClientsSection = () => {
 
   const filterOptions = ['All', 'Transaction Advisory Services', 'Management Consulting', 'Virtual CFO / Business Support Services'];
 
-  const filteredClients = activeFilter === 'All' 
+  // UPDATED: Filter and sort alphabetically
+  const filteredClients = (activeFilter === 'All' 
     ? clients 
-    : clients.filter(client => client.services === activeFilter);
+    : clients.filter(client => client.services.includes(activeFilter))
+  ).sort((a, b) => a.name.localeCompare(b.name));
 
   const handleCardDoubleClick = (website) => {
     window.open(website, '_blank');
@@ -458,12 +460,12 @@ const ClientsSection = () => {
           </div>
         </motion.div>
 
-        {/* Client Cards Grid - 5 COLUMNS */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+        {/* Client Cards Grid - 6 COLUMNS */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
           {filteredClients.map((client, index) => (
             <motion.div
               key={client.name}
-              className="client-card h-48 group"
+              className="client-card h-40 group"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -474,28 +476,28 @@ const ClientsSection = () => {
                 onDoubleClick={() => handleCardDoubleClick(client.website)}
               >
                 {/* Front Face - Logo Only */}
-                <div className="client-card-front bg-white shadow-professional border border-gray-200 flex items-center justify-center p-6">
+                <div className="client-card-front bg-white shadow-professional border border-gray-200 flex items-center justify-center p-4">
                   <div className="w-full h-full flex items-center justify-center">
                     <img 
                       src={client.logo} 
                       alt={client.name}
                       className="max-w-full max-h-full object-contain"
-                      style={{ maxWidth: '120px', maxHeight: '120px' }}
+                      style={{ maxWidth: '100px', maxHeight: '100px' }}
                       onError={(e) => {
-                        e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(client.name)}&background=1e40af&color=ffffff&size=120`;
+                        e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(client.name)}&background=1e40af&color=ffffff&size=100`;
                       }}
                     />
                   </div>
                 </div>
 
                 {/* Back Face - Company Details */}
-                <div className="client-card-back bg-gradient-to-br from-primary-700 to-primary-800 shadow-professional text-white p-4 flex flex-col justify-center">
+                <div className="client-card-back bg-gradient-to-br from-primary-700 to-primary-800 shadow-professional text-white p-3 flex flex-col justify-center">
                   <div className="text-center">
-                    <h3 className="text-base font-bold mb-2 font-serif leading-tight">{client.name}</h3>
-                    <div className="inline-block px-3 py-1 bg-white/20 rounded-full text-xs font-medium mb-3">
+                    <h3 className="text-sm font-bold mb-2 font-serif leading-tight">{client.name}</h3>
+                    <div className="inline-block px-2 py-1 bg-white/20 rounded-full text-xs font-medium mb-2">
                       {client.sector}
                     </div>
-                    <p className="text-sm leading-relaxed opacity-90 mb-3">
+                    <p className="text-xs leading-relaxed opacity-90 mb-2">
                       {client.description}
                     </p>
                     <div className="text-xs opacity-75">
@@ -515,7 +517,7 @@ const ClientsSection = () => {
             animate={{ opacity: 1 }}
           >
             <p className="text-charcoal-500 text-lg">No clients found for the selected service type.</p>
-          </motion.div>
+          </div>
         )}
       </div>
     </section>
