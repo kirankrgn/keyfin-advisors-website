@@ -267,98 +267,177 @@ const ServicesSection = () => {
   );
 };
 
-// Clients Section Component  
+// Clients Section Component - REPLACE THIS ENTIRE SECTION
 const ClientsSection = () => {
-  const [selectedSector, setSelectedSector] = React.useState('All');
+  const [activeFilter, setActiveFilter] = React.useState('All');
+  const [flippedCards, setFlippedCards] = React.useState(new Set());
 
   const clients = [
     {
-      name: "TechCorp Solutions",
-      logo: "https://via.placeholder.com/160x80/0B2545/FFFFFF?text=TechCorp",
-      website: "https://techcorp.com",
-      industry: "Technology & Software",
-      sector: "Technology",
-      service: "Series A Fundraising",
-      amount: "$5M",
-      description: "Led successful Series A funding round and provided strategic advisory for scaling operations."
-    },
-    {
-      name: "HealthVenture Inc",
-      logo: "https://via.placeholder.com/160x80/0B2545/FFFFFF?text=HealthVenture",
-      website: "https://healthventure.com", 
-      industry: "Healthcare & Life Sciences",
+      name: "ABM Respiratory Care",
       sector: "Healthcare",
-      service: "M&A Advisory",
-      amount: "$12M Acquisition",
-      description: "Facilitated strategic acquisition and comprehensive due diligence services."
+      services: "Transaction Advisory Services",
+      description: "Healthcare equipment manufacturer specializing in respiratory care solutions",
+      logo: "https://www.abmmedical.com/assets/images/abm-logo.png",
+      website: "https://www.abmmedical.com"
     },
     {
-      name: "ManufacturingPro",
-      logo: "https://via.placeholder.com/160x80/0B2545/FFFFFF?text=MfgPro",
-      website: "https://manufacturingpro.com",
-      industry: "Manufacturing & Industrial",
-      sector: "Manufacturing", 
-      service: "Virtual CFO Services",
-      amount: "Ongoing",
-      description: "Virtual CFO support and financial planning for operational expansion."
+      name: "Animo Tech",
+      sector: "Technology",
+      services: "Virtual CFO / Business Support Services",
+      description: "Technology solutions provider focused on digital transformation services",
+      logo: "https://animotech.in/wp-content/uploads/2021/06/animo-tech-logo.png",
+      website: "https://animotech.in"
     },
     {
-      name: "FinanceFirst Capital",
-      logo: "https://via.placeholder.com/160x80/0B2545/FFFFFF?text=FinanceFirst",
-      website: "https://financefirst.com",
-      industry: "Financial Services",
+      name: "Backpackers United",
+      sector: "Consumer",
+      services: "Virtual CFO / Business Support Services",
+      description: "Travel and adventure community platform connecting backpackers worldwide",
+      logo: "https://backpackersunited.in/_next/static/media/logo.df8e3e4a.svg",
+      website: "https://backpackersunited.in"
+    },
+    {
+      name: "The Stree Co.",
+      sector: "Consumer",
+      services: "Virtual CFO / Business Support Services",
+      description: "Women-focused brand creating sustainable and empowering products",
+      logo: "https://cdn.shopify.com/s/files/1/0449/5225/6667/files/TSC_Logo_Black.png",
+      website: "https://thestreeco.com"
+    },
+    {
+      name: "Jar",
       sector: "Financial Services",
-      service: "Capital Restructuring",
-      amount: "$20M",
-      description: "Capital structure optimization and debt refinancing advisory."
+      services: "Transaction Advisory Services",
+      description: "Digital savings and investment platform for everyday financial goals",
+      logo: "https://jar.app/static/media/jar-logo.svg",
+      website: "https://jar.app"
     },
     {
-      name: "RetailMax Group",
-      logo: "https://via.placeholder.com/160x80/0B2545/FFFFFF?text=RetailMax",
-      website: "https://retailmax.com",
-      industry: "Retail & Consumer",
-      sector: "Retail",
-      service: "Strategic Advisory",
-      amount: "Business Transformation",
-      description: "Digital strategy implementation for market expansion."
+      name: "Detectwell Security",
+      sector: "Others",
+      services: "Transaction Advisory Services",
+      description: "Advanced security solutions and surveillance technology provider",
+      logo: "https://detectwellsecurity.com/wp-content/uploads/2021/03/detectwell-logo.png",
+      website: "https://detectwellsecurity.com"
     },
     {
-      name: "GreenEnergy Solutions",
-      logo: "https://via.placeholder.com/160x80/0B2545/FFFFFF?text=GreenEnergy",
-      website: "https://greenenergy.com",
-      industry: "Renewable Energy",
-      sector: "Energy",
-      service: "Series B Funding",
-      amount: "$15M", 
-      description: "Series B funding round and growth strategy consulting."
+      name: "DrinkPrime",
+      sector: "Consumer",
+      services: "Management Consulting",
+      description: "Smart water purification subscription service revolutionizing home water consumption",
+      logo: "https://drinkprime.in/static/media/logo.svg",
+      website: "https://drinkprime.in"
     },
     {
-      name: "PropTech Innovations",
-      logo: "https://via.placeholder.com/160x80/0B2545/FFFFFF?text=PropTech",
-      website: "https://proptech.com",
-      industry: "Real Estate & PropTech",
+      name: "Genetic Nutrition",
+      sector: "Consumer",
+      services: "Transaction Advisory Services",
+      description: "Personalized nutrition and wellness solutions based on genetic profiling",
+      logo: "https://geneticnutrition.in/wp-content/uploads/2020/12/genetic-nutrition-logo.png",
+      website: "https://geneticnutrition.in"
+    },
+    {
+      name: "Gilly's",
+      sector: "Consumer",
+      services: "Transaction Advisory Services",
+      description: "Premium food and beverage brand focused on artisanal products",
+      logo: "https://gillys.in/wp-content/uploads/2021/05/gillys-logo.png",
+      website: "https://gillys.in"
+    },
+    {
+      name: "Hotelzify",
       sector: "Technology",
-      service: "Seed Funding",
-      amount: "$3M",
-      description: "Early stage funding and go-to-market strategy development."
+      services: "Transaction Advisory Services",
+      description: "Hotel management and booking technology platform for hospitality industry",
+      logo: "https://hotelzify.com/assets/images/hotelzify-logo.svg",
+      website: "https://hotelzify.com"
     },
     {
-      name: "BioMed Research",
-      logo: "https://via.placeholder.com/160x80/0B2545/FFFFFF?text=BioMed",
-      website: "https://biomed.com",
-      industry: "Biotechnology",
+      name: "The Editorial Institute",
+      sector: "Others",
+      services: "Virtual CFO / Business Support Services",
+      description: "Content creation and editorial services for publishing and media industry",
+      logo: "https://editorialinstitute.org/wp-content/uploads/2020/09/editorial-institute-logo.png",
+      website: "https://editorialinstitute.org"
+    },
+    {
+      name: "Krishivan Tech",
+      sector: "Others",
+      services: "Transaction Advisory Services",
+      description: "Agricultural technology solutions focused on sustainable farming practices",
+      logo: "https://krishivantech.com/assets/images/krishivan-logo.png",
+      website: "https://krishivantech.com"
+    },
+    {
+      name: "Origin Fresh",
+      sector: "Consumer",
+      services: "Transaction Advisory Services",
+      description: "Organic food and fresh produce supply chain management platform",
+      logo: "https://originfresh.in/wp-content/uploads/2021/04/origin-fresh-logo.svg",
+      website: "https://originfresh.in"
+    },
+    {
+      name: "Ridgetop Dental International",
       sector: "Healthcare",
-      service: "IPO Advisory", 
-      amount: "$50M IPO",
-      description: "Pre-IPO preparation and public offering advisory services."
+      services: "Transaction Advisory Services",
+      description: "International dental care services and medical tourism facilitator",
+      logo: "https://ridgetopdental.com/wp-content/uploads/2020/08/ridgetop-dental-logo.png",
+      website: "https://ridgetopdental.com"
+    },
+    {
+      name: "Zorp",
+      sector: "Technology",
+      services: "Transaction Advisory Services",
+      description: "No-code platform for building custom business applications and workflows",
+      logo: "https://zorp.one/static/media/zorp-logo.svg",
+      website: "https://zorp.one"
+    },
+    {
+      name: "The Cambridge International School",
+      sector: "Others",
+      services: "Transaction Advisory Services",
+      description: "Premium international educational institution offering world-class curriculum",
+      logo: "https://cambridgeschool.edu.in/wp-content/uploads/2020/06/cambridge-school-logo.png",
+      website: "https://cambridgeschool.edu.in"
+    },
+    {
+      name: "The Silly Fellows",
+      sector: "Others",
+      services: "Transaction Advisory Services",
+      description: "Creative content and entertainment production company",
+      logo: "https://thesillyfellows.com/wp-content/uploads/2021/02/silly-fellows-logo.png",
+      website: "https://thesillyfellows.com"
+    },
+    {
+      name: "Bounce Infinity",
+      sector: "Consumer",
+      services: "Management Consulting",
+      description: "Electric vehicle mobility solutions and sustainable transportation platform",
+      logo: "https://bounceinfinity.com/static/media/bounce-logo.svg",
+      website: "https://bounceinfinity.com"
     }
   ];
 
-  const sectors = ['All', 'Technology', 'Healthcare', 'Financial Services', 'Manufacturing', 'Retail', 'Energy'];
-  
-  const filteredClients = selectedSector === 'All' 
+  const filterOptions = ['All', 'Transaction Advisory Services', 'Management Consulting', 'Virtual CFO / Business Support Services'];
+
+  const filteredClients = activeFilter === 'All' 
     ? clients 
-    : clients.filter(client => client.sector === selectedSector);
+    : clients.filter(client => client.services === activeFilter);
+
+  const handleCardClick = (clientName) => {
+    const newFlipped = new Set(flippedCards);
+    if (newFlipped.has(clientName)) {
+      newFlipped.delete(clientName);
+    } else {
+      newFlipped.add(clientName);
+    }
+    setFlippedCards(newFlipped);
+  };
+
+  const handleCardDoubleClick = (website) => {
+    window.open(website, '_blank');
+  };
 
   return (
     <section id="clients" className="py-20 bg-gray-50">
@@ -373,98 +452,102 @@ const ClientsSection = () => {
           <h2 className="text-4xl sm:text-5xl font-bold text-charcoal-900 mb-6 font-serif">
             Our <span className="gradient-text">Clients</span>
           </h2>
-          <p className="text-xl text-charcoal-600 max-w-3xl mx-auto mb-8">
-            Trusted by leading organizations across diverse industries for critical financial advisory and strategic consulting engagements.
+          <p className="text-xl text-charcoal-600 max-w-4xl mx-auto mb-8">
+            Selective clients worked with by the team of KeyFin Advisors across diverse industries, 
+            delivering exceptional advisory services and strategic solutions for complex business challenges.
           </p>
-
-          {/* Sector Filter */}
-          <div className="flex flex-wrap justify-center gap-3 mb-12">
-            {sectors.map((sector) => (
+          
+          {/* Service Filter Buttons */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            {filterOptions.map((filter) => (
               <motion.button
-                key={sector}
-                onClick={() => setSelectedSector(sector)}
+                key={filter}
+                onClick={() => setActiveFilter(filter)}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                  selectedSector === sector
-                    ? 'bg-primary-800 text-white shadow-professional'
-                    : 'bg-white text-charcoal-700 hover:bg-primary-100 hover:text-primary-800 shadow-sm'
+                  activeFilter === filter
+                    ? 'bg-primary-700 text-white shadow-elevated'
+                    : 'bg-white text-charcoal-700 hover:bg-primary-50 shadow-professional'
                 }`}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                {sector}
+                {filter}
               </motion.button>
             ))}
           </div>
         </motion.div>
 
-        {/* Client Logos Grid */}
-        <motion.div 
-          className="bg-white rounded-xl shadow-professional p-8 md:p-12"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
-        >
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
-            {filteredClients.map((client, index) => (
+        {/* Client Cards Grid */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          {filteredClients.map((client, index) => (
+            <motion.div
+              key={client.name}
+              className={`flip-card h-64 ${flippedCards.has(client.name) ? 'flipped' : ''}`}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+            >
               <motion.div
-                key={client.name}
-                className="relative group cursor-pointer"
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ scale: 1.05 }}
-                style={{ perspective: '1000px' }}
+                className="flip-card-inner cursor-pointer"
+                onClick={() => handleCardClick(client.name)}
+                onDoubleClick={() => handleCardDoubleClick(client.website)}
+                whileHover={{ scale: 1.02 }}
               >
-                {/* Flip Container - INCREASED HEIGHT */}
-                <motion.div
-                  className="relative w-full h-32 preserve-3d group-hover:rotate-y-180 transition-transform duration-700"
-                  style={{ 
-                    transformStyle: 'preserve-3d',
-                    transition: 'transform 0.7s'
-                  }}
-                >
-                  {/* Front Side - Logo */}
-                  <div 
-                    className="absolute inset-0 backface-hidden rounded-lg border border-gray-200 bg-white p-6 flex items-center justify-center hover:shadow-lg transition-shadow duration-300"
-                    style={{ backfaceVisibility: 'hidden' }}
-                    onClick={() => window.open(client.website, '_blank')}
-                  >
-                    <img 
-                      src={client.logo} 
-                      alt={client.name}
-                      className="w-full h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
-                    />
-                  </div>
-
-                  {/* Back Side - Details */}
-                  <div 
-                    className="absolute inset-0 backface-hidden rounded-lg bg-gradient-to-br from-primary-800 to-primary-900 p-4 flex flex-col justify-center text-center text-white rotate-y-180"
-                    style={{ 
-                      backfaceVisibility: 'hidden',
-                      transform: 'rotateY(180deg)'
-                    }}
-                    onClick={() => window.open(client.website, '_blank')}
-                  >
-                    <h4 className="font-semibold text-sm mb-2 leading-tight">
+                {/* Front Face - Logo */}
+                <div className="flip-card-front bg-white shadow-professional border border-gray-200 flex items-center justify-center p-6">
+                  <div className="text-center">
+                    <div className="w-24 h-24 mx-auto mb-4 flex items-center justify-center bg-gray-100 rounded-lg overflow-hidden">
+                      <img 
+                        src={client.logo} 
+                        alt={client.name}
+                        className="max-w-full max-h-full object-contain"
+                        onError={(e) => {
+                          e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(client.name)}&background=1e40af&color=ffffff&size=96`;
+                        }}
+                      />
+                    </div>
+                    <h3 className="text-lg font-semibold text-charcoal-900 font-serif">
                       {client.name}
-                    </h4>
-                    <p className="text-gold-400 text-xs font-medium mb-2">
-                      {client.sector}
-                    </p>
-                    <p className="text-gray-300 text-xs font-semibold mb-1">
-                      {client.service}
-                    </p>
-                    <p className="text-gold-300 text-xs font-bold">
-                      {client.amount}
-                    </p>
+                    </h3>
+                    <p className="text-sm text-charcoal-500 mt-1">{client.sector}</p>
                   </div>
-                </motion.div>
+                </div>
+
+                {/* Back Face - Description */}
+                <div className="flip-card-back bg-gradient-to-br from-primary-700 to-primary-800 shadow-professional text-white p-6 flex flex-col justify-center">
+                  <div className="text-center">
+                    <h3 className="text-lg font-semibold mb-3 font-serif">{client.name}</h3>
+                    <div className="space-y-2 mb-4">
+                      <div className="inline-block px-3 py-1 bg-white/20 rounded-full text-xs font-medium">
+                        {client.sector}
+                      </div>
+                      <div className="inline-block px-3 py-1 bg-gold-500/20 rounded-full text-xs font-medium">
+                        {client.services}
+                      </div>
+                    </div>
+                    <p className="text-sm leading-relaxed opacity-90">
+                      {client.description}
+                    </p>
+                    <div className="mt-4 text-xs opacity-75">
+                      Double-click to visit website
+                    </div>
+                  </div>
+                </div>
               </motion.div>
-            ))}
-          </div>
-        </motion.div>
+            </motion.div>
+          ))}
+        </div>
+
+        {filteredClients.length === 0 && (
+          <motion.div 
+            className="text-center py-12"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+          >
+            <p className="text-charcoal-500 text-lg">No clients found for the selected service type.</p>
+          </motion.div>
+        )}
       </div>
     </section>
   );
