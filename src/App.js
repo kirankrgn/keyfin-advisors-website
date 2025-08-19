@@ -417,9 +417,9 @@ const ClientsSection = () => {
                 whileHover={{ scale: 1.05 }}
                 style={{ perspective: '1000px' }}
               >
-                {/* Flip Container */}
+                {/* Flip Container - INCREASED HEIGHT */}
                 <motion.div
-                  className="relative w-full h-24 preserve-3d group-hover:rotate-y-180 transition-transform duration-700"
+                  className="relative w-full h-32 preserve-3d group-hover:rotate-y-180 transition-transform duration-700"
                   style={{ 
                     transformStyle: 'preserve-3d',
                     transition: 'transform 0.7s'
@@ -427,7 +427,7 @@ const ClientsSection = () => {
                 >
                   {/* Front Side - Logo */}
                   <div 
-                    className="absolute inset-0 backface-hidden rounded-lg border border-gray-200 bg-white p-4 flex items-center justify-center hover:shadow-lg transition-shadow duration-300"
+                    className="absolute inset-0 backface-hidden rounded-lg border border-gray-200 bg-white p-6 flex items-center justify-center hover:shadow-lg transition-shadow duration-300"
                     style={{ backfaceVisibility: 'hidden' }}
                     onClick={() => window.open(client.website, '_blank')}
                   >
@@ -447,11 +447,11 @@ const ClientsSection = () => {
                     }}
                     onClick={() => window.open(client.website, '_blank')}
                   >
-                    <h4 className="font-semibold text-sm mb-1 leading-tight">
+                    <h4 className="font-semibold text-sm mb-2 leading-tight">
                       {client.name}
                     </h4>
                     <p className="text-gold-400 text-xs font-medium mb-2">
-                      {client.industry}
+                      {client.sector}
                     </p>
                     <p className="text-gray-300 text-xs font-semibold mb-1">
                       {client.service}
@@ -461,26 +461,8 @@ const ClientsSection = () => {
                     </p>
                   </div>
                 </motion.div>
-
-                {/* Click indicator */}
-                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="bg-primary-800 text-white text-xs px-2 py-1 rounded-full flex items-center gap-1">
-                    <ExternalLink className="w-3 h-3" />
-                    <span>Visit</span>
-                  </div>
-                </div>
               </motion.div>
             ))}
-          </div>
-
-          {/* Results count */}
-          <div className="text-center mt-8 pt-8 border-t border-gray-200">
-            <p className="text-charcoal-500">
-              Showing <span className="font-semibold text-primary-800">{filteredClients.length}</span> clients
-              {selectedSector !== 'All' && (
-                <span> in <span className="font-semibold text-primary-800">{selectedSector}</span></span>
-              )}
-            </p>
           </div>
         </motion.div>
       </div>
