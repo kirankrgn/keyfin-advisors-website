@@ -267,7 +267,7 @@ const ServicesSection = () => {
   );
 };
 
-// Clients Section Component - FIXED VERSION
+// Clients Section Component - COMPLETE WITH ALL REAL LOGOS
 const ClientsSection = () => {
   const [activeFilter, setActiveFilter] = React.useState('All');
 
@@ -277,7 +277,7 @@ const ClientsSection = () => {
       sector: "Healthcare",
       services: "Transaction Advisory Services",
       description: "Healthcare equipment manufacturer specializing in respiratory care solutions and medical device distribution",
-      logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/96id2chi_Logos.zip", // You'll need to upload individual logos
+      logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/hg996il4_ABM.png",
       website: "https://www.abmmedical.com"
     },
     {
@@ -285,7 +285,7 @@ const ClientsSection = () => {
       sector: "Technology",
       services: "Virtual CFO / Business Support Services",
       description: "Technology solutions provider focused on digital transformation and innovative software development services",
-      logo: "https://images.unsplash.com/photo-1662052955098-042b46e60c2b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwyfHxjb21wYW55JTIwbG9nb3N8ZW58MHx8fHwxNzU1NjMyMDk2fDA&ixlib=rb-4.1.0&q=85",
+      logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/yfm31ck6_Animo%20tech.jpg",
       website: "https://getanimo.io"
     },
     {
@@ -293,7 +293,7 @@ const ClientsSection = () => {
       sector: "Consumer",
       services: "Virtual CFO / Business Support Services",
       description: "Women-focused brand creating sustainable and empowering products for modern lifestyle needs",
-      logo: "https://images.pexels.com/photos/7202944/pexels-photo-7202944.jpeg",
+      logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/y3qzvss0_The%20Stree%20Co.png",
       website: "https://thestreeco.com"
     },
     {
@@ -301,7 +301,7 @@ const ClientsSection = () => {
       sector: "Financial Services",
       services: "Transaction Advisory Services",
       description: "Digital savings and investment platform enabling smart financial planning for everyday goals",
-      logo: "https://images.unsplash.com/photo-1663124178647-24f30cedd1ba?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGxvZ29zfGVufDB8fHx8MTc1NTYzMjEwMnww&ixlib=rb-4.1.0&q=85",
+      logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/uxzpg0a5_Jar.png",
       website: "https://jar.app"
     },
     {
@@ -309,7 +309,7 @@ const ClientsSection = () => {
       sector: "Others",
       services: "Transaction Advisory Services",
       description: "Advanced security solutions and surveillance technology provider for commercial and residential applications",
-      logo: "https://images.unsplash.com/photo-1663124178667-28b3776d7c15?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMGxvZ29zfGVufDB8fHx8MTc1NTYzMjEwMnww&ixlib=rb-4.1.0&q=85",
+      logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/axxhiu8c_DSS.png",
       website: "https://detectwellsecurity.com"
     },
     {
@@ -317,7 +317,7 @@ const ClientsSection = () => {
       sector: "Consumer",
       services: "Management Consulting",
       description: "Smart water purification subscription service revolutionizing home water consumption with IoT technology",
-      logo: "https://images.pexels.com/photos/12113816/pexels-photo-12113816.jpeg",
+      logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/g8dcpkmy_Drinkprime.png",
       website: "https://drinkprime.in"
     },
     {
@@ -325,7 +325,7 @@ const ClientsSection = () => {
       sector: "Consumer",
       services: "Transaction Advisory Services",
       description: "Personalized nutrition and wellness solutions based on advanced genetic profiling and health analytics",
-      logo: "https://images.pexels.com/photos/12602144/pexels-photo-12602144.jpeg",
+      logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/va68iptj_Genetic%20Nutrition.jpg",
       website: "https://geneticnutrition.in"
     },
     {
@@ -333,7 +333,7 @@ const ClientsSection = () => {
       sector: "Consumer",
       services: "Transaction Advisory Services",
       description: "Premium food and beverage brand focused on artisanal products and gourmet culinary experiences",
-      logo: "https://images.unsplash.com/photo-1622465911368-72162f8da3e2?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHw0fHxidXNpbmVzcyUyMGxvZ29zfGVufDB8fHx8MTc1NTYzMjEwMnww&ixlib=rb-4.1.0&q=85",
+      logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/94ttcy8b_Gillys.jpg",
       website: "https://gillys.in"
     },
     {
@@ -341,7 +341,7 @@ const ClientsSection = () => {
       sector: "Technology",
       services: "Transaction Advisory Services",
       description: "Hotel management and booking technology platform streamlining hospitality industry operations",
-      logo: "https://images.pexels.com/photos/10121376/pexels-photo-10121376.jpeg",
+      logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/42d78i4s_Hotelzify.png",
       website: "https://hotelzify.com"
     },
     {
@@ -349,7 +349,7 @@ const ClientsSection = () => {
       sector: "Others",
       services: "Virtual CFO / Business Support Services",
       description: "Content creation and editorial services for publishing, media, and digital content industries",
-      logo: "https://images.unsplash.com/photo-1496200186974-4293800e2c20?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwxfHxjb21wYW55JTIwbG9nb3N8ZW58MHx8fHwxNzU1NjMyMDk2fDA&ixlib=rb-4.1.0&q=85",
+      logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/yxnbkoy8_The%20editorial%20institute.jpg",
       website: "https://editorialinstitute.org"
     },
     {
@@ -357,7 +357,7 @@ const ClientsSection = () => {
       sector: "Others",
       services: "Transaction Advisory Services",
       description: "Agricultural technology solutions focused on sustainable farming practices and precision agriculture",
-      logo: "https://images.unsplash.com/photo-1662052955098-042b46e60c2b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwyfHxjb21wYW55JTIwbG9nb3N8ZW58MHx8fHwxNzU1NjMyMDk2fDA&ixlib=rb-4.1.0&q=85",
+      logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/h04jgh0b_Krishivan%20Tech.jpg",
       website: "https://krishivantech.com"
     },
     {
@@ -365,7 +365,7 @@ const ClientsSection = () => {
       sector: "Consumer",
       services: "Transaction Advisory Services",
       description: "Organic food and fresh produce supply chain management platform connecting farmers to consumers",
-      logo: "https://images.unsplash.com/photo-1662052955282-da15376f3919?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwzfHxjb21wYW55JTIwbG9nb3N8ZW58MHx8fHwxNzU1NjMyMDk2fDA&ixlib=rb-4.1.0&q=85",
+      logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/t8qearte_Origin%20Fresh.jpg",
       website: "https://originfresh.in"
     },
     {
@@ -373,7 +373,7 @@ const ClientsSection = () => {
       sector: "Healthcare",
       services: "Transaction Advisory Services",
       description: "International dental care services and medical tourism facilitator providing world-class dental treatments",
-      logo: "https://images.pexels.com/photos/7202944/pexels-photo-7202944.jpeg",
+      logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/8j2pn6xw_RDI.png",
       website: "https://ridgetopdental.com"
     },
     {
@@ -381,7 +381,7 @@ const ClientsSection = () => {
       sector: "Technology",
       services: "Transaction Advisory Services",
       description: "No-code platform for building custom business applications and automated workflow solutions",
-      logo: "https://images.unsplash.com/photo-1663124178647-24f30cedd1ba?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGxvZ29zfGVufDB8fHx8MTc1NTYzMjEwMnww&ixlib=rb-4.1.0&q=85",
+      logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/ywiuimhh_Zorp.png",
       website: "https://zorp.one"
     },
     {
@@ -389,7 +389,7 @@ const ClientsSection = () => {
       sector: "Others",
       services: "Transaction Advisory Services",
       description: "Premium international educational institution offering world-class curriculum and holistic development programs",
-      logo: "https://images.unsplash.com/photo-1663124178667-28b3776d7c15?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Njd8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMGxvZ29zfGVufDB8fHx8MTc1NTYzMjEwMnww&ixlib=rb-4.1.0&q=85",
+      logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/w0dmng9r_TCIS.png",
       website: "https://cambridgeschool.edu.in"
     },
     {
@@ -397,7 +397,7 @@ const ClientsSection = () => {
       sector: "Others",
       services: "Transaction Advisory Services",
       description: "Creative content and entertainment production company specializing in digital media and storytelling",
-      logo: "https://images.pexels.com/photos/12113816/pexels-photo-12113816.jpeg",
+      logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/e3bnqbat_The%20Silly%20Fellows.png",
       website: "https://thesillyfellows.com"
     },
     {
@@ -405,7 +405,7 @@ const ClientsSection = () => {
       sector: "Consumer",
       services: "Management Consulting",
       description: "Electric vehicle mobility solutions and sustainable transportation platform for urban commuting",
-      logo: "https://images.pexels.com/photos/12602144/pexels-photo-12602144.jpeg",
+      logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/n32h7zh3_Bounce.jpg",
       website: "https://bounceinfinity.com"
     }
   ];
