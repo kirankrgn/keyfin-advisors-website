@@ -267,55 +267,101 @@ const ServicesSection = () => {
   );
 };
 
-// Clients Section Component
+// Clients Section Component  
 const ClientsSection = () => {
+  const [selectedSector, setSelectedSector] = React.useState('All');
+
   const clients = [
     {
       name: "TechCorp Solutions",
-      logo: "https://via.placeholder.com/120x60/0B2545/C19A6B?text=TechCorp",
+      logo: "https://via.placeholder.com/160x80/0B2545/FFFFFF?text=TechCorp",
+      website: "https://techcorp.com",
       industry: "Technology & Software",
-      service: "Series A Fundraising - $5M",
+      sector: "Technology",
+      service: "Series A Fundraising",
+      amount: "$5M",
       description: "Led successful Series A funding round and provided strategic advisory for scaling operations."
     },
     {
       name: "HealthVenture Inc",
-      logo: "https://via.placeholder.com/120x60/0B2545/C19A6B?text=HealthVenture", 
+      logo: "https://via.placeholder.com/160x80/0B2545/FFFFFF?text=HealthVenture",
+      website: "https://healthventure.com", 
       industry: "Healthcare & Life Sciences",
-      service: "M&A Advisory - $12M Acquisition",
-      description: "Facilitated strategic acquisition and provided comprehensive due diligence services."
+      sector: "Healthcare",
+      service: "M&A Advisory",
+      amount: "$12M Acquisition",
+      description: "Facilitated strategic acquisition and comprehensive due diligence services."
     },
     {
       name: "ManufacturingPro",
-      logo: "https://via.placeholder.com/120x60/0B2545/C19A6B?text=ManufacturingPro",
-      industry: "Manufacturing & Industrial", 
+      logo: "https://via.placeholder.com/160x80/0B2545/FFFFFF?text=MfgPro",
+      website: "https://manufacturingpro.com",
+      industry: "Manufacturing & Industrial",
+      sector: "Manufacturing", 
       service: "Virtual CFO Services",
-      description: "Ongoing virtual CFO support and financial planning for operational expansion."
+      amount: "Ongoing",
+      description: "Virtual CFO support and financial planning for operational expansion."
     },
     {
-      name: "FinanceFirst",
-      logo: "https://via.placeholder.com/120x60/0B2545/C19A6B?text=FinanceFirst",
+      name: "FinanceFirst Capital",
+      logo: "https://via.placeholder.com/160x80/0B2545/FFFFFF?text=FinanceFirst",
+      website: "https://financefirst.com",
       industry: "Financial Services",
-      service: "Capital Restructuring - $20M",
-      description: "Comprehensive capital structure optimization and debt refinancing advisory."
+      sector: "Financial Services",
+      service: "Capital Restructuring",
+      amount: "$20M",
+      description: "Capital structure optimization and debt refinancing advisory."
     },
     {
       name: "RetailMax Group",
-      logo: "https://via.placeholder.com/120x60/0B2545/C19A6B?text=RetailMax",
+      logo: "https://via.placeholder.com/160x80/0B2545/FFFFFF?text=RetailMax",
+      website: "https://retailmax.com",
       industry: "Retail & Consumer",
+      sector: "Retail",
       service: "Strategic Advisory",
-      description: "Business transformation and digital strategy implementation for market expansion."
+      amount: "Business Transformation",
+      description: "Digital strategy implementation for market expansion."
     },
     {
-      name: "GreenEnergy Co",
-      logo: "https://via.placeholder.com/120x60/0B2545/C19A6B?text=GreenEnergy",
+      name: "GreenEnergy Solutions",
+      logo: "https://via.placeholder.com/160x80/0B2545/FFFFFF?text=GreenEnergy",
+      website: "https://greenenergy.com",
       industry: "Renewable Energy",
-      service: "Series B Funding - $15M", 
-      description: "Led Series B funding round and provided growth strategy consulting."
+      sector: "Energy",
+      service: "Series B Funding",
+      amount: "$15M", 
+      description: "Series B funding round and growth strategy consulting."
+    },
+    {
+      name: "PropTech Innovations",
+      logo: "https://via.placeholder.com/160x80/0B2545/FFFFFF?text=PropTech",
+      website: "https://proptech.com",
+      industry: "Real Estate & PropTech",
+      sector: "Technology",
+      service: "Seed Funding",
+      amount: "$3M",
+      description: "Early stage funding and go-to-market strategy development."
+    },
+    {
+      name: "BioMed Research",
+      logo: "https://via.placeholder.com/160x80/0B2545/FFFFFF?text=BioMed",
+      website: "https://biomed.com",
+      industry: "Biotechnology",
+      sector: "Healthcare",
+      service: "IPO Advisory", 
+      amount: "$50M IPO",
+      description: "Pre-IPO preparation and public offering advisory services."
     }
   ];
 
+  const sectors = ['All', 'Technology', 'Healthcare', 'Financial Services', 'Manufacturing', 'Retail', 'Energy'];
+  
+  const filteredClients = selectedSector === 'All' 
+    ? clients 
+    : clients.filter(client => client.sector === selectedSector);
+
   return (
-    <section id="clients" className="py-20 bg-gray-50 overflow-hidden">
+    <section id="clients" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="text-center mb-16"
@@ -327,25 +373,40 @@ const ClientsSection = () => {
           <h2 className="text-4xl sm:text-5xl font-bold text-charcoal-900 mb-6 font-serif">
             Our <span className="gradient-text">Clients</span>
           </h2>
-          <p className="text-xl text-charcoal-600 max-w-3xl mx-auto">
+          <p className="text-xl text-charcoal-600 max-w-3xl mx-auto mb-8">
             Trusted by leading organizations across diverse industries for critical financial advisory and strategic consulting engagements.
           </p>
+
+          {/* Sector Filter */}
+          <div className="flex flex-wrap justify-center gap-3 mb-12">
+            {sectors.map((sector) => (
+              <motion.button
+                key={sector}
+                onClick={() => setSelectedSector(sector)}
+                className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                  selectedSector === sector
+                    ? 'bg-primary-800 text-white shadow-professional'
+                    : 'bg-white text-charcoal-700 hover:bg-primary-100 hover:text-primary-800 shadow-sm'
+                }`}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {sector}
+              </motion.button>
+            ))}
+          </div>
         </motion.div>
 
-        {/* Rotating Client Logos */}
+        {/* Client Logos Grid */}
         <motion.div 
-          className="bg-white rounded-xl shadow-professional p-12 mb-16 relative"
+          className="bg-white rounded-xl shadow-professional p-8 md:p-12"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h3 className="text-2xl font-semibold text-center text-charcoal-900 mb-12 font-serif">
-            Trusted by Leading Organizations
-          </h3>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
-            {clients.map((client, index) => (
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
+            {filteredClients.map((client, index) => (
               <motion.div
                 key={client.name}
                 className="relative group cursor-pointer"
@@ -353,125 +414,75 @@ const ClientsSection = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ scale: 1.1 }}
+                whileHover={{ scale: 1.05 }}
+                style={{ perspective: '1000px' }}
               >
-                {/* Logo with rotation animation */}
+                {/* Flip Container */}
                 <motion.div
-                  className="relative overflow-hidden rounded-lg bg-gradient-to-br from-primary-50 to-white p-4 border border-primary-100"
-                  animate={{ 
-                    rotateY: [0, 360],
-                  }}
-                  transition={{ 
-                    duration: 8,
-                    repeat: Infinity,
-                    ease: "linear" 
-                  }}
-                  whileHover={{ 
-                    rotateY: 0,
-                    transition: { duration: 0.3 } 
+                  className="relative w-full h-24 preserve-3d group-hover:rotate-y-180 transition-transform duration-700"
+                  style={{ 
+                    transformStyle: 'preserve-3d',
+                    transition: 'transform 0.7s'
                   }}
                 >
-                  <img 
-                    src={client.logo} 
-                    alt={client.name}
-                    className="w-full h-12 object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
-                  />
+                  {/* Front Side - Logo */}
+                  <div 
+                    className="absolute inset-0 backface-hidden rounded-lg border border-gray-200 bg-white p-4 flex items-center justify-center hover:shadow-lg transition-shadow duration-300"
+                    style={{ backfaceVisibility: 'hidden' }}
+                    onClick={() => window.open(client.website, '_blank')}
+                  >
+                    <img 
+                      src={client.logo} 
+                      alt={client.name}
+                      className="w-full h-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                    />
+                  </div>
+
+                  {/* Back Side - Details */}
+                  <div 
+                    className="absolute inset-0 backface-hidden rounded-lg bg-gradient-to-br from-primary-800 to-primary-900 p-4 flex flex-col justify-center text-center text-white rotate-y-180"
+                    style={{ 
+                      backfaceVisibility: 'hidden',
+                      transform: 'rotateY(180deg)'
+                    }}
+                    onClick={() => window.open(client.website, '_blank')}
+                  >
+                    <h4 className="font-semibold text-sm mb-1 leading-tight">
+                      {client.name}
+                    </h4>
+                    <p className="text-gold-400 text-xs font-medium mb-2">
+                      {client.industry}
+                    </p>
+                    <p className="text-gray-300 text-xs font-semibold mb-1">
+                      {client.service}
+                    </p>
+                    <p className="text-gold-300 text-xs font-bold">
+                      {client.amount}
+                    </p>
+                  </div>
                 </motion.div>
 
-                {/* Hover overlay with client details */}
-                <motion.div
-                  className="absolute inset-0 bg-primary-900/95 rounded-lg p-4 flex flex-col justify-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  initial={{ opacity: 0 }}
-                  whileHover={{ opacity: 1 }}
-                >
-                  <h4 className="text-white font-semibold text-sm mb-2">
-                    {client.name}
-                  </h4>
-                  <p className="text-gold-400 text-xs font-medium mb-2">
-                    {client.industry}
-                  </p>
-                  <p className="text-gray-300 text-xs font-semibold mb-1">
-                    {client.service}
-                  </p>
-                  <p className="text-gray-400 text-xs leading-tight">
-                    {client.description}
-                  </p>
-                </motion.div>
+                {/* Click indicator */}
+                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="bg-primary-800 text-white text-xs px-2 py-1 rounded-full flex items-center gap-1">
+                    <ExternalLink className="w-3 h-3" />
+                    <span>Visit</span>
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>
-          
-          {/* Floating animation elements */}
-          <motion.div
-            className="absolute top-4 right-4 w-2 h-2 bg-gold-400 rounded-full"
-            animate={{ 
-              y: [0, -10, 0],
-              opacity: [0.3, 1, 0.3] 
-            }}
-            transition={{ 
-              duration: 2,
-              repeat: Infinity 
-            }}
-          />
-          <motion.div
-            className="absolute bottom-4 left-4 w-3 h-3 bg-primary-400 rounded-full"
-            animate={{ 
-              y: [0, -15, 0],
-              opacity: [0.2, 0.8, 0.2] 
-            }}
-            transition={{ 
-              duration: 3,
-              repeat: Infinity 
-            }}
-          />
-        </motion.div>
 
-        {/* Industry Categories */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {[
-            {
-              title: "Technology & Innovation",
-              description: "SaaS platforms, fintech startups, and innovative technology companies seeking growth capital.",
-              count: "15+ Clients"
-            },
-            {
-              title: "Healthcare & Life Sciences", 
-              description: "Medical device companies, pharmaceutical firms, and healthcare service providers.",
-              count: "12+ Clients"
-            },
-            {
-              title: "Manufacturing & Industrial",
-              description: "Traditional manufacturing, industrial automation, and supply chain enterprises.",
-              count: "18+ Clients"
-            },
-            {
-              title: "Financial Services",
-              description: "Investment firms, family offices, and institutional investors seeking strategic advisory.",
-              count: "10+ Clients"
-            }
-          ].map((category, index) => (
-            <motion.div
-              key={category.title}
-              className="bg-white rounded-lg shadow-professional p-6 hover:shadow-elevated transition-all duration-300 hover-lift"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-            >
-              <div className="flex items-center justify-between mb-4">
-                <h3 className="text-lg font-semibold text-charcoal-900 font-serif">
-                  {category.title}
-                </h3>
-                <span className="text-sm font-medium text-gold-600 bg-gold-100 px-2 py-1 rounded-full">
-                  {category.count}
-                </span>
-              </div>
-              <p className="text-charcoal-600 text-sm leading-relaxed">
-                {category.description}
-              </p>
-            </motion.div>
-          ))}
-        </div>
+          {/* Results count */}
+          <div className="text-center mt-8 pt-8 border-t border-gray-200">
+            <p className="text-charcoal-500">
+              Showing <span className="font-semibold text-primary-800">{filteredClients.length}</span> clients
+              {selectedSector !== 'All' && (
+                <span> in <span className="font-semibold text-primary-800">{selectedSector}</span></span>
+              )}
+            </p>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
