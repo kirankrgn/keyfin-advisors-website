@@ -267,7 +267,7 @@ const ServicesSection = () => {
   );
 };
 
-// Clients Section Component - WITH ALPHABETICAL SORTING
+// Clients Section Component - FIXED JSX SYNTAX
 const ClientsSection = () => {
   const [activeFilter, setActiveFilter] = React.useState('All');
 
@@ -412,7 +412,6 @@ const ClientsSection = () => {
 
   const filterOptions = ['All', 'Transaction Advisory Services', 'Management Consulting', 'Virtual CFO / Business Support Services'];
 
-  // UPDATED: Filter and sort alphabetically
   const filteredClients = (activeFilter === 'All' 
     ? clients 
     : clients.filter(client => client.services.includes(activeFilter))
@@ -517,7 +516,7 @@ const ClientsSection = () => {
             animate={{ opacity: 1 }}
           >
             <p className="text-charcoal-500 text-lg">No clients found for the selected service type.</p>
-          </div>
+          </motion.div>
         )}
       </div>
     </section>
