@@ -269,27 +269,53 @@ const ServicesSection = () => {
 
 // Clients Section Component
 const ClientsSection = () => {
-  const clientCategories = [
+  const clients = [
     {
-      title: "Technology & Innovation",
-      description: "Leading technology companies, SaaS platforms, and innovative startups across growth stages."
+      name: "TechCorp Solutions",
+      logo: "https://via.placeholder.com/120x60/0B2545/C19A6B?text=TechCorp",
+      industry: "Technology & Software",
+      service: "Series A Fundraising - $5M",
+      description: "Led successful Series A funding round and provided strategic advisory for scaling operations."
     },
     {
-      title: "Financial Services",
-      description: "Investment firms, family offices, and institutional investors seeking strategic advisory."
+      name: "HealthVenture Inc",
+      logo: "https://via.placeholder.com/120x60/0B2545/C19A6B?text=HealthVenture", 
+      industry: "Healthcare & Life Sciences",
+      service: "M&A Advisory - $12M Acquisition",
+      description: "Facilitated strategic acquisition and provided comprehensive due diligence services."
     },
     {
-      title: "Healthcare & Life Sciences",
-      description: "Medical device companies, pharmaceutical firms, and healthcare service providers."
+      name: "ManufacturingPro",
+      logo: "https://via.placeholder.com/120x60/0B2545/C19A6B?text=ManufacturingPro",
+      industry: "Manufacturing & Industrial", 
+      service: "Virtual CFO Services",
+      description: "Ongoing virtual CFO support and financial planning for operational expansion."
     },
     {
-      title: "Manufacturing & Industrial",
-      description: "Traditional manufacturing, industrial automation, and supply chain enterprises."
+      name: "FinanceFirst",
+      logo: "https://via.placeholder.com/120x60/0B2545/C19A6B?text=FinanceFirst",
+      industry: "Financial Services",
+      service: "Capital Restructuring - $20M",
+      description: "Comprehensive capital structure optimization and debt refinancing advisory."
+    },
+    {
+      name: "RetailMax Group",
+      logo: "https://via.placeholder.com/120x60/0B2545/C19A6B?text=RetailMax",
+      industry: "Retail & Consumer",
+      service: "Strategic Advisory",
+      description: "Business transformation and digital strategy implementation for market expansion."
+    },
+    {
+      name: "GreenEnergy Co",
+      logo: "https://via.placeholder.com/120x60/0B2545/C19A6B?text=GreenEnergy",
+      industry: "Renewable Energy",
+      service: "Series B Funding - $15M", 
+      description: "Led Series B funding round and provided growth strategy consulting."
     }
   ];
 
   return (
-    <section id="clients" className="py-20 bg-gray-50">
+    <section id="clients" className="py-20 bg-gray-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="text-center mb-16"
@@ -306,35 +332,141 @@ const ClientsSection = () => {
           </p>
         </motion.div>
 
-        {/* Client Logo Placeholder Area */}
+        {/* Rotating Client Logos */}
         <motion.div 
-          className="bg-white rounded-xl shadow-professional p-12 mb-12"
+          className="bg-white rounded-xl shadow-professional p-12 mb-16 relative"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <div className="text-center text-charcoal-500 border-2 border-dashed border-charcoal-300 rounded-lg p-12">
-            <Building2 className="w-16 h-16 mx-auto mb-4 text-charcoal-400" />
-            <h3 className="text-lg font-semibold mb-2">Client Logos Display</h3>
-            <p>Professional client logos will be showcased here to demonstrate our trusted partnerships and successful engagements.</p>
+          <h3 className="text-2xl font-semibold text-center text-charcoal-900 mb-12 font-serif">
+            Trusted by Leading Organizations
+          </h3>
+          
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center">
+            {clients.map((client, index) => (
+              <motion.div
+                key={client.name}
+                className="relative group cursor-pointer"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{ scale: 1.1 }}
+              >
+                {/* Logo with rotation animation */}
+                <motion.div
+                  className="relative overflow-hidden rounded-lg bg-gradient-to-br from-primary-50 to-white p-4 border border-primary-100"
+                  animate={{ 
+                    rotateY: [0, 360],
+                  }}
+                  transition={{ 
+                    duration: 8,
+                    repeat: Infinity,
+                    ease: "linear" 
+                  }}
+                  whileHover={{ 
+                    rotateY: 0,
+                    transition: { duration: 0.3 } 
+                  }}
+                >
+                  <img 
+                    src={client.logo} 
+                    alt={client.name}
+                    className="w-full h-12 object-contain filter grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                </motion.div>
+
+                {/* Hover overlay with client details */}
+                <motion.div
+                  className="absolute inset-0 bg-primary-900/95 rounded-lg p-4 flex flex-col justify-center text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  initial={{ opacity: 0 }}
+                  whileHover={{ opacity: 1 }}
+                >
+                  <h4 className="text-white font-semibold text-sm mb-2">
+                    {client.name}
+                  </h4>
+                  <p className="text-gold-400 text-xs font-medium mb-2">
+                    {client.industry}
+                  </p>
+                  <p className="text-gray-300 text-xs font-semibold mb-1">
+                    {client.service}
+                  </p>
+                  <p className="text-gray-400 text-xs leading-tight">
+                    {client.description}
+                  </p>
+                </motion.div>
+              </motion.div>
+            ))}
           </div>
+          
+          {/* Floating animation elements */}
+          <motion.div
+            className="absolute top-4 right-4 w-2 h-2 bg-gold-400 rounded-full"
+            animate={{ 
+              y: [0, -10, 0],
+              opacity: [0.3, 1, 0.3] 
+            }}
+            transition={{ 
+              duration: 2,
+              repeat: Infinity 
+            }}
+          />
+          <motion.div
+            className="absolute bottom-4 left-4 w-3 h-3 bg-primary-400 rounded-full"
+            animate={{ 
+              y: [0, -15, 0],
+              opacity: [0.2, 0.8, 0.2] 
+            }}
+            transition={{ 
+              duration: 3,
+              repeat: Infinity 
+            }}
+          />
         </motion.div>
 
+        {/* Industry Categories */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {clientCategories.map((category, index) => (
+          {[
+            {
+              title: "Technology & Innovation",
+              description: "SaaS platforms, fintech startups, and innovative technology companies seeking growth capital.",
+              count: "15+ Clients"
+            },
+            {
+              title: "Healthcare & Life Sciences", 
+              description: "Medical device companies, pharmaceutical firms, and healthcare service providers.",
+              count: "12+ Clients"
+            },
+            {
+              title: "Manufacturing & Industrial",
+              description: "Traditional manufacturing, industrial automation, and supply chain enterprises.",
+              count: "18+ Clients"
+            },
+            {
+              title: "Financial Services",
+              description: "Investment firms, family offices, and institutional investors seeking strategic advisory.",
+              count: "10+ Clients"
+            }
+          ].map((category, index) => (
             <motion.div
               key={category.title}
-              className="bg-white rounded-lg shadow-professional p-6 hover:shadow-elevated transition-all duration-300"
+              className="bg-white rounded-lg shadow-professional p-6 hover:shadow-elevated transition-all duration-300 hover-lift"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <h3 className="text-lg font-semibold text-charcoal-900 mb-3 font-serif">
-                {category.title}
-              </h3>
-              <p className="text-charcoal-600 text-sm">
+              <div className="flex items-center justify-between mb-4">
+                <h3 className="text-lg font-semibold text-charcoal-900 font-serif">
+                  {category.title}
+                </h3>
+                <span className="text-sm font-medium text-gold-600 bg-gold-100 px-2 py-1 rounded-full">
+                  {category.count}
+                </span>
+              </div>
+              <p className="text-charcoal-600 text-sm leading-relaxed">
                 {category.description}
               </p>
             </motion.div>
