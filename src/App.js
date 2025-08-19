@@ -278,7 +278,7 @@ const ClientsSection = () => {
       services: ["Transaction Advisory Services"],
       description: "Description: To be updated",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/hg996il4_ABM.png",
-      website: "https://www.abmmedical.com"
+      website: "https://www.abmrc.com"
     },
     {
       name: "Animo Tech",
@@ -302,7 +302,7 @@ const ClientsSection = () => {
       services: ["Transaction Advisory Services", "Virtual CFO / Business Support Services"],
       description: "Description: To be updated",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/uxzpg0a5_Jar.png",
-      website: "https://jar.app"
+      website: "https://myjar.app"
     },
     {
       name: "Detectwell Security",
@@ -350,7 +350,7 @@ const ClientsSection = () => {
       services: ["Virtual CFO / Business Support Services"],
       description: "Description: To be updated",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/yxnbkoy8_The%20editorial%20institute.jpg",
-      website: "https://editorialinstitute.org"
+      website: "https://www.theeditorialinstitute.com/"
     },
     {
       name: "Krishivan Tech",
@@ -374,7 +374,7 @@ const ClientsSection = () => {
       services: ["Transaction Advisory Services"],
       description: "Description: To be updated",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/8j2pn6xw_RDI.png",
-      website: "https://ridgetopdental.com"
+      website: "https://ridgetopdental.in"
     },
     {
       name: "Zorp",
@@ -390,7 +390,7 @@ const ClientsSection = () => {
       services: ["Transaction Advisory Services"],
       description: "Description: To be updated",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/w0dmng9r_TCIS.png",
-      website: "https://cambridgeschool.edu.in"
+      website: "https://tcis.in/"
     },
     {
       name: "The Silly Fellows",
