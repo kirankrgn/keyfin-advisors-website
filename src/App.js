@@ -68,7 +68,7 @@ const Header = () => {
           </motion.div>
           
           <nav className="hidden md:flex space-x-8">
-            {['Home', 'Services', 'Clients', 'About', 'Team', 'Contact'].map((item) => (
+            {['Home', 'Services', 'Clients', 'About', 'Team', 'Insights', 'Contact'].map((item) => (
               <motion.button
                 key={item}
                 className="text-charcoal-700 hover:text-primary-900 font-medium transition-colors"
@@ -103,7 +103,7 @@ const Header = () => {
             exit={{ opacity: 0, y: -20 }}
           >
             <nav className="flex flex-col space-y-4">
-              {['Home', 'Services', 'Clients', 'About', 'Team', 'Contact'].map((item) => (
+              {['Home', 'Services', 'Clients', 'About', 'Team', 'Insights', 'Contact'].map((item) => (
                 <button
                   key={item}
                   className="text-charcoal-700 hover:text-primary-900 font-medium transition-colors text-left"
@@ -641,6 +641,89 @@ const TeamSection = () => {
                 </div>
               </div>
             </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// Insights/Blog Section Component
+const InsightsSection = () => {
+  const insights = [
+    {
+      title: "Market Outlook: Strategic Considerations for 2024",
+      summary: "Analysis of current market conditions and strategic implications for M&A activity and capital formation.",
+      date: "December 2024",
+      category: "Market Analysis"
+    },
+    {
+      title: "Due Diligence Excellence in Complex Transactions",
+      summary: "Best practices and methodologies for conducting comprehensive due diligence in sophisticated business combinations.",
+      date: "November 2024",
+      category: "Transaction Advisory"
+    },
+    {
+      title: "Capital Structure Optimization Strategies",
+      summary: "Frameworks for evaluating and optimizing capital structures across different business lifecycles and market conditions.",
+      date: "November 2024",
+      category: "Capital Markets"
+    }
+  ];
+
+  return (
+    <section id="insights" className="py-20 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
+          <h2 className="text-4xl sm:text-5xl font-bold text-charcoal-900 mb-6 font-serif">
+            Market <span className="gradient-text">Insights</span>
+          </h2>
+          <p className="text-xl text-charcoal-600 max-w-3xl mx-auto">
+            Industry analysis, research commentary, and strategic perspectives on current market developments and transaction trends.
+          </p>
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {insights.map((insight, index) => (
+            <motion.article
+              key={insight.title}
+              className="bg-white rounded-xl shadow-professional overflow-hidden hover:shadow-elevated transition-all duration-300 hover-lift"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+            >
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="px-3 py-1 bg-primary-100 text-primary-700 text-xs font-semibold rounded-full">
+                    {insight.category}
+                  </span>
+                  <div className="flex items-center text-charcoal-500 text-sm">
+                    <Calendar className="w-4 h-4 mr-1" />
+                    {insight.date}
+                  </div>
+                </div>
+                
+                <h3 className="text-xl font-semibold text-charcoal-900 mb-3 font-serif">
+                  {insight.title}
+                </h3>
+                
+                <p className="text-charcoal-600 mb-4 leading-relaxed">
+                  {insight.summary}
+                </p>
+                
+                <button className="text-primary-700 font-semibold flex items-center group">
+                  Read More
+                  <ExternalLink className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </div>
+            </motion.article>
           ))}
         </div>
       </div>
