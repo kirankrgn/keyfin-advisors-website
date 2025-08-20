@@ -298,7 +298,7 @@ const ClientsSection = () => {
     },
     {
       name: "Jar",
-      sector: "Financial Services",
+      sector: "Fintech",
       services: ["Transaction Advisory Services", "Virtual CFO / Business Support Services"],
       description: "Description: To be updated",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/uxzpg0a5_Jar.png",
@@ -306,7 +306,7 @@ const ClientsSection = () => {
     },
     {
       name: "Detectwell Security",
-      sector: "Others",
+      sector: "Enterprise Services",
       services: ["Transaction Advisory Services", "Virtual CFO / Business Support Services"],
       description: "Description: To be updated",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/axxhiu8c_DSS.png",
@@ -346,7 +346,7 @@ const ClientsSection = () => {
     },
     {
       name: "The Editorial Institute",
-      sector: "Others",
+      sector: "Enterprise Services",
       services: ["Virtual CFO / Business Support Services"],
       description: "Description: To be updated",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/yxnbkoy8_The%20editorial%20institute.jpg",
@@ -354,7 +354,7 @@ const ClientsSection = () => {
     },
     {
       name: "Krishivan Tech",
-      sector: "Others",
+      sector: "Agritech",
       services: ["Transaction Advisory Services"],
       description: "Description: To be updated",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/h04jgh0b_Krishivan%20Tech.jpg",
@@ -386,7 +386,7 @@ const ClientsSection = () => {
     },
     {
       name: "The Cambridge International School",
-      sector: "Others",
+      sector: "Education Services",
       services: ["Transaction Advisory Services"],
       description: "Description: To be updated",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/w0dmng9r_TCIS.png",
@@ -394,7 +394,7 @@ const ClientsSection = () => {
     },
     {
       name: "The Silly Fellows",
-      sector: "Others",
+      sector: "Enterprise Services",
       services: ["Transaction Advisory Services", "Virtual CFO / Business Support Services"],
       description: "Description: To be updated",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/e3bnqbat_The%20Silly%20Fellows.png",
@@ -402,7 +402,7 @@ const ClientsSection = () => {
     },
     {
       name: "Bounce Infinity",
-      sector: "Consumer",
+      sector: "Mobility",
       services: ["Transaction Advisory Services", "Management Consulting"],
       description: "Description: To be updated",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/n32h7zh3_Bounce.jpg",
