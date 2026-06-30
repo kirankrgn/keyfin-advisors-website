@@ -122,6 +122,12 @@ const Header = () => {
 
 // Hero Section Component
 const HeroSection = () => {
+  const stats = [
+    { value: "10+", label: "Years of Experience" },
+    { value: "100+", label: "Transactions Advised" },
+    { value: "3", label: "Core Service Lines" },
+  ];
+
   return (
     <section 
       id="home" 
@@ -170,15 +176,40 @@ const HeroSection = () => {
               whileTap={{ scale: 0.95 }}
               onClick={() => {
                 const element = document.getElementById('services');
-                if (element) {
-                  element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
+                if (element) element.scrollIntoView({ behavior: 'smooth', block: 'start' });
               }}
             >
               Explore Our Services
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
             </motion.button>
+
+            <motion.button
+              className="border-2 border-white/60 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all group flex items-center"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => {
+                const element = document.getElementById('contact');
+                if (element) element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }}
+            >
+              Get in Touch
+            </motion.button>
           </motion.div>
+
+          <motion.div
+            className="mt-16 grid grid-cols-3 gap-6 max-w-2xl mx-auto"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.9 }}
+          >
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center border-r border-white/20 last:border-r-0 px-4">
+                <div className="text-3xl sm:text-4xl font-bold text-gold-400 font-serif">{stat.value}</div>
+                <div className="text-sm text-gray-300 mt-1 leading-tight">{stat.label}</div>
+              </div>
+            ))}
+          </motion.div>
+
         </motion.div>
       </div>
     </section>
@@ -276,15 +307,15 @@ const ClientsSection = () => {
       name: "ABM Respiratory Care",
       sector: "Healthcare",
       services: ["Transaction Advisory Services"],
-      description: "Description: To be updated",
+      description: "An advanced healthcare company with intelligent, differentiated, and innovative respiratory solutions.",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/hg996il4_ABM.png",
       website: "https://www.abmrc.com"
     },
     {
-      name: "Animo Tech",
+      name: "Animo G",
       sector: "Technology",
       services: ["Virtual CFO / Business Support Services"],
-      description: "Description: To be updated",
+      description: "Personalized supplement guidance for the way you actually live.",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/yfm31ck6_Animo%20tech.jpg",
       website: "https://getanimo.io"
     },
@@ -292,7 +323,7 @@ const ClientsSection = () => {
       name: "The Stree Co.",
       sector: "Consumer",
       services: ["Virtual CFO / Business Support Services"],
-      description: "Description: To be updated",
+      description: "Women's hygiene and wellness brand.",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/y3qzvss0_The%20Stree%20Co.png",
       website: "https://thestreeco.com"
     },
@@ -300,7 +331,7 @@ const ClientsSection = () => {
       name: "Jar",
       sector: "Fintech",
       services: ["Transaction Advisory Services", "Virtual CFO / Business Support Services"],
-      description: "Description: To be updated",
+      description: "Fintech platform for automated digital gold savings.",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/uxzpg0a5_Jar.png",
       website: "https://myjar.app"
     },
@@ -308,7 +339,7 @@ const ClientsSection = () => {
       name: "Detectwell Security",
       sector: "Enterprise Services",
       services: ["Transaction Advisory Services", "Virtual CFO / Business Support Services"],
-      description: "Description: To be updated",
+      description: "Security and manpower supply organisation for government and public sector organisations.",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/axxhiu8c_DSS.png",
       website: "https://detectwellsecurity.com"
     },
@@ -316,7 +347,7 @@ const ClientsSection = () => {
       name: "DrinkPrime",
       sector: "Consumer",
       services: ["Transaction Advisory Services", "Management Consulting"],
-      description: "Description: To be updated",
+      description: "IoT-enabled subscription-based smart water purifier company.",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/g8dcpkmy_Drinkprime.png",
       website: "https://drinkprime.in"
     },
@@ -324,7 +355,7 @@ const ClientsSection = () => {
       name: "Genetic Nutrition",
       sector: "Consumer",
       services: ["Transaction Advisory Services"],
-      description: "Description: To be updated",
+      description: "Sports nutrition and fitness supplements brand.",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/va68iptj_Genetic%20Nutrition.jpg",
       website: "https://geneticnutrition.in"
     },
@@ -332,7 +363,7 @@ const ClientsSection = () => {
       name: "Gilly's",
       sector: "Consumer",
       services: ["Transaction Advisory Services"],
-      description: "Description: To be updated",
+      description: "Premium restaurant, brewery and hospitality brand.",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/94ttcy8b_Gillys.jpg",
       website: "https://gillys.in"
     },
@@ -340,15 +371,15 @@ const ClientsSection = () => {
       name: "Hotelzify",
       sector: "Technology",
       services: ["Transaction Advisory Services"],
-      description: "Description: To be updated",
+      description: "Hospitality technology and hotel management platform.",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/42d78i4s_Hotelzify.png",
       website: "https://hotelzify.com"
     },
     {
       name: "The Editorial Institute",
-      sector: "Enterprise Services",
+      sector: "Education",
       services: ["Virtual CFO / Business Support Services"],
-      description: "Description: To be updated",
+      description: "Professional editing and publishing education platform.",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/yxnbkoy8_The%20editorial%20institute.jpg",
       website: "https://www.theeditorialinstitute.com/"
     },
@@ -356,7 +387,7 @@ const ClientsSection = () => {
       name: "Krishivan Tech",
       sector: "Agritech",
       services: ["Transaction Advisory Services"],
-      description: "Description: To be updated",
+      description: "AgriTech company enabling precision farming solutions.",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/h04jgh0b_Krishivan%20Tech.jpg",
       website: "https://krishivantech.com"
     },
@@ -364,7 +395,7 @@ const ClientsSection = () => {
       name: "Origin Fresh",
       sector: "Consumer",
       services: ["Transaction Advisory Services"],
-      description: "Description: To be updated",
+      description: "Fresh food and agricultural supply chain company.",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/t8qearte_Origin%20Fresh.jpg",
       website: "https://originfresh.in"
     },
@@ -372,7 +403,7 @@ const ClientsSection = () => {
       name: "Ridgetop Dental International",
       sector: "Healthcare",
       services: ["Transaction Advisory Services"],
-      description: "Description: To be updated",
+      description: "Multi-specialty dental care and clinic network.",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/8j2pn6xw_RDI.png",
       website: "https://ridgetopdental.in"
     },
@@ -380,15 +411,15 @@ const ClientsSection = () => {
       name: "Zorp",
       sector: "Technology",
       services: ["Transaction Advisory Services", "Virtual CFO / Business Support Services"],
-      description: "Description: To be updated",
+      description: "Last-mile logistics and delivery management SaaS platform.",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/ywiuimhh_Zorp.png",
       website: "https://zorp.one"
     },
     {
       name: "The Cambridge International School",
-      sector: "Education Services",
+      sector: "Education",
       services: ["Transaction Advisory Services"],
-      description: "Description: To be updated",
+      description: "K-12 international school offering Cambridge curriculum.",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/w0dmng9r_TCIS.png",
       website: "https://tcis.in/"
     },
@@ -396,17 +427,17 @@ const ClientsSection = () => {
       name: "The Silly Fellows",
       sector: "Enterprise Services",
       services: ["Transaction Advisory Services", "Virtual CFO / Business Support Services"],
-      description: "Description: To be updated",
+      description: "Creative entertainment and experiential events company.",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/e3bnqbat_The%20Silly%20Fellows.png",
       website: "https://thesillyfellows.com"
     },
     {
-      name: "Bounce Infinity",
+      name: "Bounce Daily",
       sector: "Mobility",
       services: ["Transaction Advisory Services", "Management Consulting"],
-      description: "Description: To be updated",
+      description: "An EV manufacturing company and scooter rental platform for gig workers.",
       logo: "https://customer-assets.emergentagent.com/job_keyfin-deploy/artifacts/n32h7zh3_Bounce.jpg",
-      website: "https://bounceinfinity.com"
+      website: "https://bouncedaily.in/"
     }
   ];
 
@@ -417,7 +448,7 @@ const ClientsSection = () => {
     : clients.filter(client => client.services.includes(activeFilter))
   ).sort((a, b) => a.name.localeCompare(b.name));
 
-  const handleCardDoubleClick = (website) => {
+  const handleCardClick = (website) => {
     window.open(website, '_blank');
   };
 
@@ -472,7 +503,7 @@ const ClientsSection = () => {
             >
               <div
                 className="client-card-inner cursor-pointer"
-                onDoubleClick={() => handleCardDoubleClick(client.website)}
+                onClick={() => handleCardClick(client.website)}
               >
                 {/* Front Face - Logo Only */}
                 <div className="client-card-front bg-white shadow-professional border border-gray-200 flex items-center justify-center p-4">
@@ -496,12 +527,9 @@ const ClientsSection = () => {
                     <div className="inline-block px-2 py-1 bg-white/20 rounded-full text-xs font-medium mb-2">
                       {client.sector}
                     </div>
-                    <p className="text-xs leading-relaxed opacity-90 mb-2">
+                    <p className="text-xs leading-relaxed opacity-90">
                       {client.description}
                     </p>
-                    <div className="text-xs opacity-75">
-                      Double-click to visit website
-                    </div>
                   </div>
                 </div>
               </div>
@@ -561,15 +589,18 @@ const AboutSection = () => {
             {[
               {
                 title: "Proven Expertise",
-                description: "Proven track record across fundraising, financial modeling, and strategic advisory with deep industry knowledge."
+                description: "Proven track record across fundraising, financial modeling, and strategic advisory with deep industry knowledge.",
+                icon: TrendingUp
               },
               {
                 title: "Tailored Solutions", 
-                description: "We design strategies specific to your company's growth stage and needs, ensuring optimal outcomes."
+                description: "We design strategies specific to your company's growth stage and needs, ensuring optimal outcomes.",
+                icon: Target
               },
               {
                 title: "Trusted Partnership",
-                description: "We work as your extended finance team, ensuring long-term success through dedicated support."
+                description: "We work as your extended finance team, ensuring long-term success through dedicated support.",
+                icon: Users
               }
             ].map((item, index) => (
               <motion.div
@@ -581,7 +612,7 @@ const AboutSection = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-primary-100 to-primary-200 rounded-lg flex items-center justify-center mx-auto mb-6">
-                  <Award className="w-8 h-8 text-primary-700" />
+                  <item.icon className="w-8 h-8 text-primary-700" />
                 </div>
                 <h4 className="text-xl font-semibold mb-4 text-primary-900 font-serif">
                   {item.title}
@@ -600,14 +631,10 @@ const AboutSection = () => {
 
 // Team Section Component
 const TeamSection = () => {
-  const teamMembers = [
-    {
-      name: "Leadership Team",
-      role: "Chartered Accountants & Financial Advisors",
-      description: "Experienced professionals with deep expertise in corporate finance, strategic advisory, and complex transaction management.",
-      linkedIn: "#",
-      achievements: ["CA Qualification", "15+ Years Experience", "200+ Transactions"]
-    }
+  const achievements = [
+    { icon: Award, label: "Chartered Accountant" },
+    { icon: TrendingUp, label: "10+ Years Experience" },
+    { icon: BarChart3, label: "100+ Transactions" },
   ];
 
   return (
@@ -624,59 +651,61 @@ const TeamSection = () => {
             Expert <span className="gradient-text">Leadership</span>
           </h2>
           <p className="text-xl text-charcoal-600 max-w-3xl mx-auto">
-            Our team combines deep technical expertise with strategic business acumen, 
-            delivering exceptional results across complex financial advisory engagements.
+            Advisory built on deep financial expertise, transaction experience, and a genuine commitment to client outcomes.
           </p>
         </motion.div>
 
         <div className="max-w-4xl mx-auto">
-          {teamMembers.map((member, index) => (
-            <motion.div
-              key={member.name}
-              className="bg-gradient-to-br from-primary-50 to-white rounded-xl shadow-professional p-8 hover:shadow-elevated transition-all duration-300"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-            >
-              <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
-                <div className="w-32 h-32 bg-gradient-to-br from-gold-500 to-gold-600 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Users className="w-16 h-16 text-white" />
+          <motion.div
+            className="bg-gradient-to-br from-primary-50 to-white rounded-xl shadow-professional p-8 hover:shadow-elevated transition-all duration-300"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
+              <div className="flex-shrink-0">
+                <img
+                  src="/kiran.png"
+                  alt="Kiran Kumar Gowda N"
+                  className="w-36 h-36 rounded-full object-cover object-top shadow-elevated border-4 border-white"
+                />
+              </div>
+
+              <div className="flex-1 text-center md:text-left">
+                <div className="flex items-center justify-center md:justify-start gap-3 mb-1">
+                  <h3 className="text-2xl font-bold text-charcoal-900 font-serif">
+                    Kiran Kumar Gowda N
+                  </h3>
+                  <a 
+                    href="https://linkedin.com/in/kirankrgn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary-600 hover:text-primary-700 transition-colors"
+                  >
+                    <Linkedin className="w-5 h-5" />
+                  </a>
                 </div>
-                
-                <div className="flex-1 text-center md:text-left">
-                  <div className="flex items-center justify-center md:justify-start gap-4 mb-4">
-                    <h3 className="text-2xl font-bold text-charcoal-900 font-serif">
-                      {member.name}
-                    </h3>
-                    <a 
-                      href={member.linkedIn}
-                      className="text-primary-600 hover:text-primary-700 transition-colors"
-                    >
-                      <Linkedin className="w-5 h-5" />
-                    </a>
-                  </div>
-                  
-                  <p className="text-lg font-semibold text-gold-600 mb-4">
-                    {member.role}
-                  </p>
-                  
-                  <p className="text-charcoal-600 leading-relaxed mb-6">
-                    {member.description}
-                  </p>
-                  
-                  <div className="grid grid-cols-3 gap-6 text-center">
-                    {member.achievements.map((achievement, idx) => (
-                      <div key={idx} className="flex flex-col">
-                        <Award className="w-8 h-8 text-teal-500 mx-auto mb-2" />
-                        <span className="text-sm text-charcoal-600">{achievement}</span>
-                      </div>
-                    ))}
-                  </div>
+
+                <p className="text-lg font-semibold text-gold-600 mb-4">
+                  Founder & Managing Advisor | Chartered Accountant
+                </p>
+
+                <p className="text-charcoal-600 leading-relaxed mb-6">
+                  Kiran is a Chartered Accountant with 10+ years of post-qualification experience across Investment Banking, Transaction Advisory, and Corporate Strategy. Previously with BDO India and Protiviti, he has advised startups and mid-market businesses on M&A, fundraising, financial due diligence, and CFO mandates. He is also a founding team member at Breadlake Ventures, giving KeyFin clients privileged access to the startup and investor ecosystem.
+                </p>
+
+                <div className="grid grid-cols-3 gap-6 text-center">
+                  {achievements.map((item, idx) => (
+                    <div key={idx} className="flex flex-col items-center">
+                      <item.icon className="w-7 h-7 text-teal-500 mb-2" />
+                      <span className="text-sm text-charcoal-600 font-medium">{item.label}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
-            </motion.div>
-          ))}
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
@@ -750,15 +779,18 @@ const ContactSection = () => {
               </div>
             </div>
 
-            {/* Google Maps Placeholder */}
-            <div className="mt-8">
-              <div className="bg-gray-200 rounded-lg h-64 flex items-center justify-center">
-                <div className="text-center text-charcoal-500">
-                  <MapPin className="w-16 h-16 mx-auto mb-4 text-charcoal-400" />
-                  <h3 className="text-lg font-semibold mb-2">Google Maps Integration</h3>
-                  <p>Interactive map showing KeyFin Advisors office location will be embedded here.</p>
-                </div>
-              </div>
+            {/* Google Maps Embed */}
+            <div className="mt-8 rounded-lg overflow-hidden shadow-professional">
+              <iframe
+                title="KeyFin Advisors Location"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.9271495876894!2d77.5454!3d12.9087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s18th+Main+Rd%2C+Muneshwara+Block%2C+Banashankari+3rd+Stage%2C+Bengaluru%2C+Karnataka+560085!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin"
+                width="100%"
+                height="256"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </motion.div>
 
@@ -853,6 +885,11 @@ const ContactSection = () => {
 
 // Footer Component
 const Footer = () => {
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
   return (
     <footer className="bg-charcoal-900 text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -867,46 +904,66 @@ const Footer = () => {
               Strategic financial advisory services for sophisticated clients seeking exceptional results.
             </p>
             <div className="flex space-x-4">
-              <Linkedin className="w-5 h-5 text-gray-400 hover:text-gold-500 cursor-pointer transition-colors" />
-              <Globe className="w-5 h-5 text-gray-400 hover:text-gold-500 cursor-pointer transition-colors" />
+              <a href="https://linkedin.com/in/kirankrgn" target="_blank" rel="noopener noreferrer">
+                <Linkedin className="w-5 h-5 text-gray-400 hover:text-gold-500 cursor-pointer transition-colors" />
+              </a>
+              <a href="https://keyfin.in" target="_blank" rel="noopener noreferrer">
+                <Globe className="w-5 h-5 text-gray-400 hover:text-gold-500 cursor-pointer transition-colors" />
+              </a>
             </div>
           </div>
           
           <div>
             <h4 className="font-semibold mb-4 font-serif">Services</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-white transition-colors">M&A, Capital Raising & Transaction Advisory</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Strategic Advisory & Management Consulting</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Virtual CFO & Business Support Services</a></li>
+              <li><button onClick={() => scrollToSection('services')} className="hover:text-white transition-colors text-left">M&A, Capital Raising & Transaction Advisory</button></li>
+              <li><button onClick={() => scrollToSection('services')} className="hover:text-white transition-colors text-left">Strategic Advisory & Management Consulting</button></li>
+              <li><button onClick={() => scrollToSection('services')} className="hover:text-white transition-colors text-left">Virtual CFO & Business Support Services</button></li>
             </ul>
           </div>
           
           <div>
             <h4 className="font-semibold mb-4 font-serif">Company</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-white transition-colors">About</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Team</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
+              <li><button onClick={() => scrollToSection('about')} className="hover:text-white transition-colors">About</button></li>
+              <li><button onClick={() => scrollToSection('team')} className="hover:text-white transition-colors">Team</button></li>
+              <li><button onClick={() => scrollToSection('contact')} className="hover:text-white transition-colors">Contact</button></li>
             </ul>
           </div>
           
           <div>
             <h4 className="font-semibold mb-4 font-serif">Contact</h4>
             <ul className="space-y-2 text-gray-400">
-              <li>+91 9880634234</li>
-              <li>contact@keyfin.in</li>
+              <li><a href="tel:+919880634234" className="hover:text-white transition-colors">+91 9880634234</a></li>
+              <li><a href="mailto:contact@keyfin.in" className="hover:text-white transition-colors">contact@keyfin.in</a></li>
               <li>Bangalore, India</li>
             </ul>
           </div>
         </div>
         
         <div className="border-t border-charcoal-800 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 KeyFin Advisors. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} KeyFin Advisors. All rights reserved.</p>
         </div>
       </div>
     </footer>
   );
 };
+
+// Floating WhatsApp Button
+const WhatsAppButton = () => (
+  <a
+    href="https://wa.me/919880634234?text=Hi%20Kiran%2C%20I%20came%20across%20KeyFin%20Advisors%20and%20would%20like%20to%20discuss%20a%20potential%20engagement."
+    target="_blank"
+    rel="noopener noreferrer"
+    className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full shadow-elevated transition-transform hover:scale-110"
+    style={{ backgroundColor: '#25D366' }}
+    aria-label="Chat on WhatsApp"
+  >
+    <svg viewBox="0 0 24 24" fill="white" width="28" height="28" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+);
 
 export default function App() {
   return (
@@ -922,6 +979,7 @@ export default function App() {
             <TeamSection />
             <ContactSection />
             <Footer />
+            <WhatsAppButton />
           </div>
         } />
       </Routes>
