@@ -692,7 +692,7 @@ const TeamSection = () => {
                 </p>
 
                 <p className="text-charcoal-600 leading-relaxed mb-6">
-                  Kiran is a Chartered Accountant with 10+ years of post-qualification experience across Investment Banking, Transaction Advisory, and Corporate Strategy. Previously with BDO India and Protiviti, he has advised startups and mid-market businesses on M&A, fundraising, financial due diligence, and CFO mandates. He is also a founding team member at Breadlake Ventures, giving KeyFin clients privileged access to the startup and investor ecosystem.
+                  Kiran is a Chartered Accountant with 10+ years of post-qualification experience across Investment Banking, Transaction Advisory, and Corporate Strategy. Previously with BDO India and CreedCap, he has advised startups and mid-market businesses on M&A, fundraising, financial due diligence, and CFO mandates. He is also a founding team member at WickedRide and Breadlake Ventures.
                 </p>
 
                 <div className="grid grid-cols-3 gap-6 text-center">
