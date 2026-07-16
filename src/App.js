@@ -771,9 +771,9 @@ const ContactSection = () => {
                 <div>
                   <div className="text-charcoal-900 font-semibold">Office Address</div>
                   <div className="text-charcoal-600">
-                    No. 1/2-8, 2nd Cross, 18th main,<br />
-                    Muneshwara Block, BSK 3rd Stage,<br />
-                    Bangalore 560026
+                    No. 4334, 1st Floor, 17th A Main, <br />
+                    Opp. Vivekananda Park, Girinagar, BSK 3rd Stage,<br />
+                    Bangalore, Karnataka, India - 560085.
                   </div>
                 </div>
               </div>
@@ -783,7 +783,7 @@ const ContactSection = () => {
             <div className="mt-8 rounded-lg overflow-hidden shadow-professional">
               <iframe
                 title="KeyFin Advisors Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.9271495876894!2d77.5454!3d12.9087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s18th+Main+Rd%2C+Muneshwara+Block%2C+Banashankari+3rd+Stage%2C+Bengaluru%2C+Karnataka+560085!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin"
+                src=src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.503114127366!2d77.54525547358841!3d12.939625715581498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3e17c1e95e77%3A0x44c0bb9f080d81d8!2sKeyFin%20Advisors!5e0!3m2!1sen!2sin!4v1784181854523!5m2!1sen!2sin"
                 width="100%"
                 height="256"
                 style={{ border: 0 }}
