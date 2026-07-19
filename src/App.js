@@ -73,7 +73,11 @@ const Header = () => {
             {['Home', 'Services', 'Clients', 'About', 'Team', 'Contact'].map((item) => (
               <motion.button
                 key={item}
-                className="text-charcoal-700 hover:text-primary-900 font-medium transition-colors"
+                className={`font-medium transition-colors ${
+                  isScrolled 
+                    ? 'text-charcoal-700 hover:text-primary-900' 
+                    : 'text-white hover:text-gold-400'
+                }`}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection(item.toLowerCase())}
@@ -89,9 +93,9 @@ const Header = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             <div className="w-6 h-6 flex flex-col justify-center items-center">
-              <span className={`block w-6 h-0.5 bg-charcoal-700 transition-all ${isMobileMenuOpen ? 'rotate-45 translate-y-1' : ''}`}></span>
-              <span className={`block w-6 h-0.5 bg-charcoal-700 mt-1 transition-all ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
-              <span className={`block w-6 h-0.5 bg-charcoal-700 mt-1 transition-all ${isMobileMenuOpen ? '-rotate-45 -translate-y-1' : ''}`}></span>
+              <span className={`block w-6 h-0.5 transition-all ${isScrolled ? 'bg-charcoal-700' : 'bg-white'} ${isMobileMenuOpen ? 'rotate-45 translate-y-1' : ''}`}></span>
+              <span className={`block w-6 h-0.5 mt-1 transition-all ${isScrolled ? 'bg-charcoal-700' : 'bg-white'} ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
+              <span className={`block w-6 h-0.5 mt-1 transition-all ${isScrolled ? 'bg-charcoal-700' : 'bg-white'} ${isMobileMenuOpen ? '-rotate-45 -translate-y-1' : ''}`}></span>
             </div>
           </button>
         </div>
@@ -133,9 +137,9 @@ const HeroSection = () => {
   return (
     <section 
       id="home" 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700 pt-28 pb-16 sm:pt-20 sm:pb-0"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-800 via-primary-700 to-primary-600 pt-28 pb-16 sm:pt-20 sm:pb-0"
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-primary-900/90 via-primary-800/70 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-primary-800/90 via-primary-700/70 to-transparent"></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
