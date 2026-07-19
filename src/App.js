@@ -56,7 +56,9 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <motion.div 
-            className="flex items-center cursor-pointer"
+            className={`flex items-center cursor-pointer rounded-lg transition-all duration-300 ${
+              isScrolled ? '' : 'bg-background/95 backdrop-blur-sm px-3 py-2 shadow-professional'
+            }`}
             whileHover={{ scale: 1.05 }}
             onClick={() => scrollToSection('home')}
           >
@@ -131,7 +133,7 @@ const HeroSection = () => {
   return (
     <section 
       id="home" 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-900 via-primary-800 to-primary-700 pt-28 pb-16 sm:pt-20 sm:pb-0"
     >
       <div className="absolute inset-0 bg-gradient-to-r from-primary-900/90 via-primary-800/70 to-transparent"></div>
       
@@ -143,7 +145,7 @@ const HeroSection = () => {
           className="max-w-4xl mx-auto"
         >
           <motion.h1 
-            className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight font-serif"
+            className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight font-serif"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
