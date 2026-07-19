@@ -61,9 +61,9 @@ const Header = () => {
             onClick={() => scrollToSection('home')}
           >
             <img 
-              src="https://customer-assets.emergentagent.com/job_keyfin-pro/artifacts/95aoz5x6_KeyFin%20Advisors%20Logo_Black%20Font.jpg" 
+              src="/logo.png" 
               alt="KeyFin Advisors" 
-              className="h-12 w-auto"
+              className="h-11 w-auto"
             />
           </motion.div>
           
@@ -240,7 +240,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="services" className="py-20 bg-white">
+    <section id="services" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="text-center mb-16"
@@ -283,7 +283,7 @@ const ServicesSection = () => {
                 <div className="space-y-2">
                   {service.features.map((feature, idx) => (
                     <div key={idx} className="flex items-center text-sm text-charcoal-600">
-                      <div className="w-2 h-2 bg-teal-500 rounded-full mr-3"></div>
+                      <div className="w-2 h-2 bg-gold-500 rounded-full mr-3"></div>
                       {feature}
                     </div>
                   ))}
@@ -453,7 +453,7 @@ const ClientsSection = () => {
   };
 
   return (
-    <section id="clients" className="py-20 bg-gray-50">
+    <section id="clients" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="text-center mb-16"
@@ -554,7 +554,7 @@ const ClientsSection = () => {
 // About Section Component
 const AboutSection = () => {
   return (
-    <section id="about" className="py-20 bg-gray-50">
+    <section id="about" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="text-center mb-16"
@@ -638,7 +638,7 @@ const TeamSection = () => {
   ];
 
   return (
-    <section id="team" className="py-20 bg-white">
+    <section id="team" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="text-center mb-16"
@@ -698,7 +698,7 @@ const TeamSection = () => {
                 <div className="grid grid-cols-3 gap-6 text-center">
                   {achievements.map((item, idx) => (
                     <div key={idx} className="flex flex-col items-center">
-                      <item.icon className="w-7 h-7 text-teal-500 mb-2" />
+                      <item.icon className="w-7 h-7 text-gold-500 mb-2" />
                       <span className="text-sm text-charcoal-600 font-medium">{item.label}</span>
                     </div>
                   ))}
@@ -715,7 +715,7 @@ const TeamSection = () => {
 // Contact Section Component
 const ContactSection = () => {
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="text-center mb-16"
@@ -895,11 +895,13 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
-            <img 
-              src="https://customer-assets.emergentagent.com/job_keyfin-pro/artifacts/95aoz5x6_KeyFin%20Advisors%20Logo_Black%20Font.jpg" 
-              alt="KeyFin Advisors" 
-              className="h-10 w-auto mb-4 filter invert"
-            />
+            <div className="inline-block bg-background rounded-lg px-4 py-3 mb-4">
+              <img 
+                src="/logo.png" 
+                alt="KeyFin Advisors" 
+                className="h-9 w-auto"
+              />
+            </div>
             <p className="text-gray-400 mb-4">
               Strategic financial advisory services for sophisticated clients seeking exceptional results.
             </p>
