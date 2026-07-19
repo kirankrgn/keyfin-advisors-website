@@ -18,7 +18,7 @@ button:focus,
 input:focus,
 textarea:focus,
 select:focus {
-  outline: 2px solid #0B2545;
+  outline: 2px solid #0B1D33;
   outline-offset: 2px;
 }
 
@@ -32,7 +32,7 @@ select:focus {
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #0B2545;
+  background: #0B1D33;
   border-radius: 3px;
 }
 
