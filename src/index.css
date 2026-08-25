@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -19,13 +19,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.6;
-  background-color: #F7F4EF;
-  color: #2E3440;
+  background-color: #FCFBF8;
+  color: #252525;
 }
 
 /* Headings use serif font */
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Cormorant Garamond', Georgia, serif;
   font-weight: 600;
 }
 
@@ -39,26 +39,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #0B1D33;
+  background: #6E1028;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #061224;
+  background: #480A1A;
 }
 
 /* Professional shadows */
 .shadow-professional {
-  box-shadow: 0 4px 6px -1px rgba(11, 29, 51, 0.1), 0 2px 4px -1px rgba(11, 29, 51, 0.06);
+  box-shadow: 0 4px 6px -1px rgba(110, 16, 40, 0.1), 0 2px 4px -1px rgba(110, 16, 40, 0.06);
 }
 
 .shadow-elevated {
-  box-shadow: 0 20px 25px -5px rgba(11, 29, 51, 0.1), 0 10px 10px -5px rgba(11, 29, 51, 0.04);
+  box-shadow: 0 20px 25px -5px rgba(110, 16, 40, 0.1), 0 10px 10px -5px rgba(110, 16, 40, 0.04);
 }
 
-/* Gradient text */
+/* Accent text for heading emphasis words */
 .gradient-text {
-  background: linear-gradient(135deg, #C7A96B 0%, #a98a4f 100%);
+  background: linear-gradient(135deg, #6E1028 0%, #8A3E51 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -78,7 +78,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .hover-lift:hover {
   transform: translateY(-2px);
-  box-shadow: 0 25px 35px -5px rgba(11, 37, 69, 0.15);
+  box-shadow: 0 25px 35px -5px rgba(110, 16, 40, 0.15);
 }
 
 /* Client Card Flip Utilities - FIXED VERSION */
@@ -107,7 +107,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  border-radius: 0.75rem;
+  border-radius: 0.5rem;
 }
 
 .client-card-back {
