@@ -137,9 +137,9 @@ const HeroSection = () => {
   return (
     <section 
       id="home" 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-800 via-primary-700 to-primary-600 pt-28 pb-16 sm:pt-20 sm:pb-0"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-950 via-primary-900 to-primary-800 pt-28 pb-16 sm:pt-20 sm:pb-0"
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-primary-800/90 via-primary-700/70 to-transparent"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-primary-950/90 via-primary-900/70 to-transparent"></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
