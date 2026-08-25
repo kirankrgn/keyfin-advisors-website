@@ -134,10 +134,8 @@ const HeroSection = () => {
       className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background pt-32 pb-16 sm:pt-24 sm:pb-0"
     >
       {/* Subtle decorative accent echoing the logo's angular gold/burgundy motif, kept low-opacity so it stays in the background */}
-      <div className="absolute top-0 right-0 w-1/2 h-full pointer-events-none overflow-hidden">
-        <div className="absolute -top-20 -right-20 w-[36rem] h-[36rem] rounded-full bg-gradient-to-br from-primary-100 via-champagne to-transparent opacity-60 blur-2xl"></div>
-        <div className="absolute top-1/3 right-0 w-72 h-72 rounded-full bg-gold-100 opacity-40 blur-3xl"></div>
-      </div>
+      <div className="absolute -top-20 -right-20 w-72 sm:w-[36rem] h-72 sm:h-[36rem] rounded-full bg-gradient-to-br from-primary-100 via-champagne to-transparent opacity-60 blur-2xl pointer-events-none"></div>
+      <div className="absolute top-1/3 right-0 w-40 sm:w-72 h-40 sm:h-72 rounded-full bg-gold-100 opacity-40 blur-3xl pointer-events-none"></div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
@@ -258,7 +256,7 @@ const ServicesSection = () => {
             Our <span className="gradient-text">Expertise</span>
           </h2>
           <div className="w-16 h-0.5 bg-gold-500 mx-auto mb-6"></div>
-          <p className="text-xl text-charcoal-600 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-charcoal-600 max-w-3xl mx-auto">
             Delivering exceptional advisory services across the spectrum of corporate finance, 
             strategic planning, and business transformation initiatives.
           </p>
@@ -472,7 +470,7 @@ const ClientsSection = () => {
             Our <span className="gradient-text">Clients</span>
           </h2>
           <div className="w-16 h-0.5 bg-gold-500 mx-auto mb-6"></div>
-          <p className="text-xl text-charcoal-600 max-w-4xl mx-auto mb-8">
+          <p className="text-lg sm:text-xl text-charcoal-600 max-w-4xl mx-auto mb-8">
             Selective clients worked with by the team of KeyFin Advisors across diverse industries, 
             delivering exceptional advisory services and strategic solutions for complex business challenges.
           </p>
@@ -574,7 +572,7 @@ const AboutSection = () => {
             About <span className="gradient-text">Us</span>
           </h2>
           <div className="w-16 h-0.5 bg-gold-500 mx-auto mb-6"></div>
-          <p className="text-xl text-charcoal-600 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg sm:text-xl text-charcoal-600 max-w-4xl mx-auto leading-relaxed">
             At <span className="text-charcoal-600">KeyFin Advisors</span>, we are dedicated to 
             helping businesses and entrepreneurs make smarter financial decisions. With deep expertise in 
             transaction advisory, fundraising, and strategic finance, we act as trusted partners to guide 
@@ -590,7 +588,7 @@ const AboutSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <h3 className="text-3xl font-bold text-center text-charcoal-900 mb-4 font-serif">
+          <h3 className="text-2xl sm:text-3xl font-bold text-center text-charcoal-900 mb-4 font-serif">
             Why Choose <span className="gradient-text">Us</span>
           </h3>
           <div className="w-16 h-0.5 bg-gold-500 mx-auto mb-12"></div>
@@ -660,7 +658,7 @@ const TeamSection = () => {
             Expert <span className="gradient-text">Leadership</span>
           </h2>
           <div className="w-16 h-0.5 bg-gold-500 mx-auto mb-6"></div>
-          <p className="text-xl text-charcoal-600 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-charcoal-600 max-w-3xl mx-auto">
             Advisory built on deep financial expertise, transaction experience, and a genuine commitment to client outcomes.
           </p>
         </motion.div>
@@ -738,7 +736,7 @@ const ContactSection = () => {
             Contact <span className="gradient-text">Us</span>
           </h2>
           <div className="w-16 h-0.5 bg-gold-500 mx-auto mb-6"></div>
-          <p className="text-xl text-charcoal-600 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-charcoal-600 max-w-3xl mx-auto">
             Connect with our advisory team to discuss your strategic financial requirements and explore how we can support your objectives.
           </p>
         </motion.div>
