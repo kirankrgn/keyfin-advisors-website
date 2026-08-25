@@ -56,9 +56,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <motion.div 
-            className={`flex items-center cursor-pointer rounded-lg transition-all duration-300 ${
-              isScrolled ? '' : 'bg-background/95 backdrop-blur-sm px-3 py-2 shadow-professional'
-            }`}
+            className="flex items-center cursor-pointer"
             whileHover={{ scale: 1.05 }}
             onClick={() => scrollToSection('home')}
           >
@@ -73,11 +71,7 @@ const Header = () => {
             {['Home', 'Services', 'Clients', 'About', 'Team', 'Contact'].map((item) => (
               <motion.button
                 key={item}
-                className={`font-medium transition-colors ${
-                  isScrolled 
-                    ? 'text-charcoal-700 hover:text-primary-900' 
-                    : 'text-white/90 hover:text-white'
-                }`}
+                className="font-medium transition-colors text-charcoal-700 hover:text-primary-900"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => scrollToSection(item.toLowerCase())}
@@ -93,9 +87,9 @@ const Header = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             <div className="w-6 h-6 flex flex-col justify-center items-center">
-              <span className={`block w-6 h-0.5 transition-all ${isScrolled ? 'bg-charcoal-700' : 'bg-white'} ${isMobileMenuOpen ? 'rotate-45 translate-y-1' : ''}`}></span>
-              <span className={`block w-6 h-0.5 mt-1 transition-all ${isScrolled ? 'bg-charcoal-700' : 'bg-white'} ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
-              <span className={`block w-6 h-0.5 mt-1 transition-all ${isScrolled ? 'bg-charcoal-700' : 'bg-white'} ${isMobileMenuOpen ? '-rotate-45 -translate-y-1' : ''}`}></span>
+              <span className={`block w-6 h-0.5 bg-charcoal-700 transition-all ${isMobileMenuOpen ? 'rotate-45 translate-y-1' : ''}`}></span>
+              <span className={`block w-6 h-0.5 bg-charcoal-700 mt-1 transition-all ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
+              <span className={`block w-6 h-0.5 bg-charcoal-700 mt-1 transition-all ${isMobileMenuOpen ? '-rotate-45 -translate-y-1' : ''}`}></span>
             </div>
           </button>
         </div>
@@ -137,9 +131,13 @@ const HeroSection = () => {
   return (
     <section 
       id="home" 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-950 via-primary-900 to-primary-800 pt-28 pb-16 sm:pt-20 sm:pb-0"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background pt-40 pb-16 sm:pt-36 sm:pb-0"
     >
-      <div className="absolute inset-0 bg-gradient-to-r from-primary-950/90 via-primary-900/70 to-transparent"></div>
+      {/* Subtle decorative accent echoing the logo's angular gold/burgundy motif, kept low-opacity so it stays in the background */}
+      <div className="absolute top-0 right-0 w-1/2 h-full pointer-events-none overflow-hidden">
+        <div className="absolute -top-20 -right-20 w-[36rem] h-[36rem] rounded-full bg-gradient-to-br from-primary-100 via-champagne to-transparent opacity-60 blur-2xl"></div>
+        <div className="absolute top-1/3 right-0 w-72 h-72 rounded-full bg-gold-100 opacity-40 blur-3xl"></div>
+      </div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <motion.div
@@ -149,20 +147,20 @@ const HeroSection = () => {
           className="max-w-4xl mx-auto"
         >
           <motion.h1 
-            className="text-3xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight font-serif"
+            className="text-3xl sm:text-5xl lg:text-6xl font-bold text-primary-900 mb-6 leading-tight font-serif"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             Driving Growth Through
-            <span className="relative inline-block text-champagne block mt-2">
+            <span className="relative inline-block text-primary-700 block mt-2">
               Financial Intelligence
               <span className="block w-24 h-0.5 bg-gold-500 mx-auto mt-4"></span>
             </span>
           </motion.h1>
           
           <motion.p 
-            className="text-xl sm:text-2xl text-gray-200 mb-8 font-light leading-relaxed max-w-3xl mx-auto"
+            className="text-xl sm:text-2xl text-charcoal-600 mb-8 font-light leading-relaxed max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -178,7 +176,7 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <motion.button 
-              className="bg-white text-primary-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-champagne transition-all shadow-elevated group flex items-center"
+              className="bg-primary-900 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-800 transition-all shadow-elevated group flex items-center"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => {
@@ -191,7 +189,7 @@ const HeroSection = () => {
             </motion.button>
 
             <motion.button
-              className="border-2 border-white/60 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-all group flex items-center"
+              className="border-2 border-primary-900/40 text-primary-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-primary-900/5 transition-all group flex items-center"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => {
@@ -210,9 +208,9 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.9 }}
           >
             {stats.map((stat, index) => (
-              <div key={index} className="text-center border-r border-white/20 last:border-r-0 px-4">
-                <div className="text-3xl sm:text-4xl font-bold text-white font-serif">{stat.value}</div>
-                <div className="text-sm text-gray-300 mt-1 leading-tight">{stat.label}</div>
+              <div key={index} className="text-center border-r border-charcoal-200 last:border-r-0 px-4">
+                <div className="text-3xl sm:text-4xl font-bold text-primary-900 font-serif">{stat.value}</div>
+                <div className="text-sm text-charcoal-600 mt-1 leading-tight">{stat.label}</div>
               </div>
             ))}
           </motion.div>
