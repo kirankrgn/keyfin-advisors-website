@@ -131,7 +131,7 @@ const HeroSection = () => {
   return (
     <section 
       id="home" 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background pt-40 pb-16 sm:pt-36 sm:pb-0"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background pt-32 pb-16 sm:pt-24 sm:pb-0"
     >
       {/* Subtle decorative accent echoing the logo's angular gold/burgundy motif, kept low-opacity so it stays in the background */}
       <div className="absolute top-0 right-0 w-1/2 h-full pointer-events-none overflow-hidden">
@@ -147,7 +147,7 @@ const HeroSection = () => {
           className="max-w-4xl mx-auto"
         >
           <motion.h1 
-            className="text-3xl sm:text-5xl lg:text-6xl font-bold text-primary-900 mb-6 leading-tight font-serif"
+            className="text-3xl sm:text-5xl lg:text-6xl font-bold text-primary-900 mb-4 leading-tight font-serif"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -160,7 +160,7 @@ const HeroSection = () => {
           </motion.h1>
           
           <motion.p 
-            className="text-xl sm:text-2xl text-charcoal-600 mb-8 font-light leading-relaxed max-w-3xl mx-auto"
+            className="text-xl sm:text-2xl text-charcoal-600 mb-6 font-light leading-relaxed max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -202,7 +202,7 @@ const HeroSection = () => {
           </motion.div>
 
           <motion.div
-            className="mt-16 grid grid-cols-3 gap-6 max-w-2xl mx-auto"
+            className="mt-10 grid grid-cols-3 gap-6 max-w-2xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.9 }}
