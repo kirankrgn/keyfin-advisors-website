@@ -151,7 +151,7 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             Driving Growth Through
-            <span className="relative inline-block text-primary-700 block mt-2">
+            <span className="relative inline-block text-gold-600 block mt-2">
               Financial Intelligence
               <span className="block w-24 h-0.5 bg-gold-500 mx-auto mt-4"></span>
             </span>
