@@ -76,7 +76,7 @@ const Header = () => {
                 className={`font-medium transition-colors ${
                   isScrolled 
                     ? 'text-charcoal-700 hover:text-primary-900' 
-                    : 'text-white hover:text-gold-400'
+                    : 'text-white/90 hover:text-white'
                 }`}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
@@ -155,8 +155,9 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             Driving Growth Through
-            <span className="text-gold-500 block mt-2">
+            <span className="relative inline-block text-champagne block mt-2">
               Financial Intelligence
+              <span className="block w-24 h-0.5 bg-gold-500 mx-auto mt-4"></span>
             </span>
           </motion.h1>
           
@@ -177,7 +178,7 @@ const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <motion.button 
-              className="bg-gold-500 text-primary-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gold-600 transition-all shadow-elevated group flex items-center"
+              className="bg-white text-primary-900 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-champagne transition-all shadow-elevated group flex items-center"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => {
@@ -210,7 +211,7 @@ const HeroSection = () => {
           >
             {stats.map((stat, index) => (
               <div key={index} className="text-center border-r border-white/20 last:border-r-0 px-4">
-                <div className="text-3xl sm:text-4xl font-bold text-gold-400 font-serif">{stat.value}</div>
+                <div className="text-3xl sm:text-4xl font-bold text-white font-serif">{stat.value}</div>
                 <div className="text-sm text-gray-300 mt-1 leading-tight">{stat.label}</div>
               </div>
             ))}
@@ -258,6 +259,7 @@ const ServicesSection = () => {
           <h2 className="text-4xl sm:text-5xl font-bold text-charcoal-900 mb-6 font-serif">
             Our <span className="gradient-text">Expertise</span>
           </h2>
+          <div className="w-16 h-0.5 bg-gold-500 mx-auto mb-6"></div>
           <p className="text-xl text-charcoal-600 max-w-3xl mx-auto">
             Delivering exceptional advisory services across the spectrum of corporate finance, 
             strategic planning, and business transformation initiatives.
@@ -268,7 +270,7 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <motion.div
               key={service.title}
-              className="bg-white border border-gray-200 rounded-xl shadow-professional hover:shadow-elevated transition-all duration-300 hover-lift p-8"
+              className="bg-white border border-charcoal-100 rounded-lg shadow-professional hover:shadow-elevated transition-all duration-300 hover-lift p-8"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -459,7 +461,7 @@ const ClientsSection = () => {
   };
 
   return (
-    <section id="clients" className="py-20 bg-white">
+    <section id="clients" className="py-20 bg-champagne">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="text-center mb-16"
@@ -471,6 +473,7 @@ const ClientsSection = () => {
           <h2 className="text-4xl sm:text-5xl font-bold text-charcoal-900 mb-6 font-serif">
             Our <span className="gradient-text">Clients</span>
           </h2>
+          <div className="w-16 h-0.5 bg-gold-500 mx-auto mb-6"></div>
           <p className="text-xl text-charcoal-600 max-w-4xl mx-auto mb-8">
             Selective clients worked with by the team of KeyFin Advisors across diverse industries, 
             delivering exceptional advisory services and strategic solutions for complex business challenges.
@@ -512,7 +515,7 @@ const ClientsSection = () => {
                 onClick={() => handleCardClick(client.website)}
               >
                 {/* Front Face - Logo Only */}
-                <div className="client-card-front bg-white shadow-professional border border-gray-200 flex items-center justify-center p-4">
+                <div className="client-card-front bg-white shadow-professional border border-charcoal-100 flex items-center justify-center p-4">
                   <div className="w-full h-full flex items-center justify-center">
                     <img 
                       src={client.logo} 
@@ -560,7 +563,7 @@ const ClientsSection = () => {
 // About Section Component
 const AboutSection = () => {
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="text-center mb-16"
@@ -572,6 +575,7 @@ const AboutSection = () => {
           <h2 className="text-4xl sm:text-5xl font-bold text-charcoal-900 mb-6 font-serif">
             About <span className="gradient-text">Us</span>
           </h2>
+          <div className="w-16 h-0.5 bg-gold-500 mx-auto mb-6"></div>
           <p className="text-xl text-charcoal-600 max-w-4xl mx-auto leading-relaxed">
             At <span className="text-charcoal-600">KeyFin Advisors</span>, we are dedicated to 
             helping businesses and entrepreneurs make smarter financial decisions. With deep expertise in 
@@ -588,9 +592,10 @@ const AboutSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <h3 className="text-3xl font-bold text-center text-charcoal-900 mb-12 font-serif">
+          <h3 className="text-3xl font-bold text-center text-charcoal-900 mb-4 font-serif">
             Why Choose <span className="gradient-text">Us</span>
           </h3>
+          <div className="w-16 h-0.5 bg-gold-500 mx-auto mb-12"></div>
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
@@ -611,7 +616,7 @@ const AboutSection = () => {
             ].map((item, index) => (
               <motion.div
                 key={item.title}
-                className="bg-white p-8 rounded-xl shadow-professional hover:shadow-elevated transition-all duration-300 hover-lift text-center"
+                className="bg-white border border-charcoal-100 p-8 rounded-lg shadow-professional hover:shadow-elevated transition-all duration-300 hover-lift text-center"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -644,7 +649,7 @@ const TeamSection = () => {
   ];
 
   return (
-    <section id="team" className="py-20 bg-background">
+    <section id="team" className="py-20 bg-champagne">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div 
           className="text-center mb-16"
@@ -656,6 +661,7 @@ const TeamSection = () => {
           <h2 className="text-4xl sm:text-5xl font-bold text-charcoal-900 mb-6 font-serif">
             Expert <span className="gradient-text">Leadership</span>
           </h2>
+          <div className="w-16 h-0.5 bg-gold-500 mx-auto mb-6"></div>
           <p className="text-xl text-charcoal-600 max-w-3xl mx-auto">
             Advisory built on deep financial expertise, transaction experience, and a genuine commitment to client outcomes.
           </p>
@@ -663,7 +669,7 @@ const TeamSection = () => {
 
         <div className="max-w-4xl mx-auto">
           <motion.div
-            className="bg-gradient-to-br from-primary-50 to-white rounded-xl shadow-professional p-8 hover:shadow-elevated transition-all duration-300"
+            className="bg-white border border-charcoal-100 rounded-lg shadow-professional p-8 hover:shadow-elevated transition-all duration-300"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -693,7 +699,7 @@ const TeamSection = () => {
                   </a>
                 </div>
 
-                <p className="text-lg font-semibold text-gold-600 mb-4">
+                <p className="text-lg font-semibold text-primary-800 mb-4">
                   Founder & Managing Advisor | Chartered Accountant
                 </p>
 
@@ -704,7 +710,7 @@ const TeamSection = () => {
                 <div className="grid grid-cols-3 gap-6 text-center">
                   {achievements.map((item, idx) => (
                     <div key={idx} className="flex flex-col items-center">
-                      <item.icon className="w-7 h-7 text-gold-500 mb-2" />
+                      <item.icon className="w-7 h-7 text-charcoal-700 mb-2" />
                       <span className="text-sm text-charcoal-600 font-medium">{item.label}</span>
                     </div>
                   ))}
@@ -733,6 +739,7 @@ const ContactSection = () => {
           <h2 className="text-4xl sm:text-5xl font-bold text-charcoal-900 mb-6 font-serif">
             Contact <span className="gradient-text">Us</span>
           </h2>
+          <div className="w-16 h-0.5 bg-gold-500 mx-auto mb-6"></div>
           <p className="text-xl text-charcoal-600 max-w-3xl mx-auto">
             Connect with our advisory team to discuss your strategic financial requirements and explore how we can support your objectives.
           </p>
@@ -811,7 +818,7 @@ const ContactSection = () => {
               name="contact" 
               method="POST" 
               data-netlify="true"
-              className="bg-gray-50 rounded-xl p-8 shadow-professional"
+              className="bg-champagne/40 rounded-lg p-8 shadow-professional"
             >
               <input type="hidden" name="form-name" value="contact" />
               <h3 className="text-2xl font-bold text-charcoal-900 mb-6 font-serif">Send a Message</h3>
@@ -822,7 +829,7 @@ const ContactSection = () => {
                   <input 
                     name="firstName"
                     type="text" 
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-primary-500 transition-colors"
+                    className="w-full px-4 py-3 rounded-lg border border-charcoal-200 focus:outline-none focus:border-primary-500 transition-colors"
                     placeholder="Your first name"
                     required
                   />
@@ -832,7 +839,7 @@ const ContactSection = () => {
                   <input 
                     name="lastName"
                     type="text" 
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-primary-500 transition-colors"
+                    className="w-full px-4 py-3 rounded-lg border border-charcoal-200 focus:outline-none focus:border-primary-500 transition-colors"
                     placeholder="Your last name"
                     required
                   />
@@ -844,7 +851,7 @@ const ContactSection = () => {
                 <input 
                   name="email"
                   type="email" 
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-primary-500 transition-colors"
+                  className="w-full px-4 py-3 rounded-lg border border-charcoal-200 focus:outline-none focus:border-primary-500 transition-colors"
                   placeholder="your@email.com"
                   required
                 />
@@ -854,7 +861,7 @@ const ContactSection = () => {
                 <label className="block text-charcoal-900 font-medium mb-2">Service Interest</label>
                 <select 
                   name="service"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-primary-500 transition-colors"
+                  className="w-full px-4 py-3 rounded-lg border border-charcoal-200 focus:outline-none focus:border-primary-500 transition-colors"
                   required
                 >
                   <option value="">Select a service</option>
@@ -869,7 +876,7 @@ const ContactSection = () => {
                 <textarea 
                   name="message"
                   rows="4"
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:border-primary-500 transition-colors resize-none"
+                  className="w-full px-4 py-3 rounded-lg border border-charcoal-200 focus:outline-none focus:border-primary-500 transition-colors resize-none"
                   placeholder="Please describe your requirements..."
                   required
                 ></textarea>
@@ -897,59 +904,57 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-charcoal-900 text-white py-12">
+    <footer className="bg-champagne text-charcoal-800 py-12 border-t border-gold-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div>
-            <div className="inline-block bg-background rounded-lg px-4 py-3 mb-4">
-              <img 
-                src="/logo.png" 
-                alt="KeyFin Advisors" 
-                className="h-9 w-auto"
-              />
-            </div>
-            <p className="text-gray-400 mb-4">
+            <img 
+              src="/logo.png" 
+              alt="KeyFin Advisors" 
+              className="h-9 w-auto mb-4"
+            />
+            <p className="text-charcoal-600 mb-4">
               Strategic financial advisory services for sophisticated clients seeking exceptional results.
             </p>
             <div className="flex space-x-4">
               <a href="https://linkedin.com/in/kirankrgn" target="_blank" rel="noopener noreferrer">
-                <Linkedin className="w-5 h-5 text-gray-400 hover:text-gold-500 cursor-pointer transition-colors" />
+                <Linkedin className="w-5 h-5 text-charcoal-500 hover:text-primary-800 cursor-pointer transition-colors" />
               </a>
               <a href="https://keyfin.in" target="_blank" rel="noopener noreferrer">
-                <Globe className="w-5 h-5 text-gray-400 hover:text-gold-500 cursor-pointer transition-colors" />
+                <Globe className="w-5 h-5 text-charcoal-500 hover:text-primary-800 cursor-pointer transition-colors" />
               </a>
             </div>
           </div>
           
           <div>
-            <h4 className="font-semibold mb-4 font-serif">Services</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li><button onClick={() => scrollToSection('services')} className="hover:text-white transition-colors text-left">M&A, Capital Raising & Transaction Advisory</button></li>
-              <li><button onClick={() => scrollToSection('services')} className="hover:text-white transition-colors text-left">Strategic Advisory & Management Consulting</button></li>
-              <li><button onClick={() => scrollToSection('services')} className="hover:text-white transition-colors text-left">Virtual CFO & Business Support Services</button></li>
+            <h4 className="font-semibold mb-4 font-serif text-charcoal-900">Services</h4>
+            <ul className="space-y-2 text-charcoal-600">
+              <li><button onClick={() => scrollToSection('services')} className="hover:text-primary-800 transition-colors text-left">M&A, Capital Raising & Transaction Advisory</button></li>
+              <li><button onClick={() => scrollToSection('services')} className="hover:text-primary-800 transition-colors text-left">Strategic Advisory & Management Consulting</button></li>
+              <li><button onClick={() => scrollToSection('services')} className="hover:text-primary-800 transition-colors text-left">Virtual CFO & Business Support Services</button></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="font-semibold mb-4 font-serif">Company</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li><button onClick={() => scrollToSection('about')} className="hover:text-white transition-colors">About</button></li>
-              <li><button onClick={() => scrollToSection('team')} className="hover:text-white transition-colors">Team</button></li>
-              <li><button onClick={() => scrollToSection('contact')} className="hover:text-white transition-colors">Contact</button></li>
+            <h4 className="font-semibold mb-4 font-serif text-charcoal-900">Company</h4>
+            <ul className="space-y-2 text-charcoal-600">
+              <li><button onClick={() => scrollToSection('about')} className="hover:text-primary-800 transition-colors">About</button></li>
+              <li><button onClick={() => scrollToSection('team')} className="hover:text-primary-800 transition-colors">Team</button></li>
+              <li><button onClick={() => scrollToSection('contact')} className="hover:text-primary-800 transition-colors">Contact</button></li>
             </ul>
           </div>
           
           <div>
-            <h4 className="font-semibold mb-4 font-serif">Contact</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li><a href="tel:+919880634234" className="hover:text-white transition-colors">+91 9880634234</a></li>
-              <li><a href="mailto:contact@keyfin.in" className="hover:text-white transition-colors">contact@keyfin.in</a></li>
+            <h4 className="font-semibold mb-4 font-serif text-charcoal-900">Contact</h4>
+            <ul className="space-y-2 text-charcoal-600">
+              <li><a href="tel:+919880634234" className="hover:text-primary-800 transition-colors">+91 9880634234</a></li>
+              <li><a href="mailto:contact@keyfin.in" className="hover:text-primary-800 transition-colors">contact@keyfin.in</a></li>
               <li>Bangalore, India</li>
             </ul>
           </div>
         </div>
         
-        <div className="border-t border-charcoal-800 pt-8 text-center text-gray-400">
+        <div className="border-t border-gold-200 pt-8 text-center text-charcoal-500">
           <p>&copy; {new Date().getFullYear()} KeyFin Advisors. All rights reserved.</p>
         </div>
       </div>
@@ -963,7 +968,7 @@ const WhatsAppButton = () => (
     href="https://wa.me/919880634234?text=Hi%20Kiran%2C%20I%20came%20across%20KeyFin%20Advisors%20and%20would%20like%20to%20discuss%20a%20potential%20engagement."
     target="_blank"
     rel="noopener noreferrer"
-    className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full shadow-elevated transition-transform hover:scale-110"
+    className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full shadow-elevated ring-4 ring-white/70 transition-transform hover:scale-110"
     style={{ backgroundColor: '#25D366' }}
     aria-label="Chat on WhatsApp"
   >
