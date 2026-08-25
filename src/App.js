@@ -160,7 +160,7 @@ const HeroSection = () => {
           </motion.h1>
           
           <motion.p 
-            className="text-xl sm:text-2xl text-charcoal-600 mb-6 font-light leading-relaxed max-w-3xl mx-auto"
+            className="text-lg sm:text-xl text-charcoal-600 mb-6 font-light leading-relaxed max-w-3xl mx-auto"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
