@@ -17,7 +17,9 @@ import {
   ExternalLink,
   Award,
   Globe,
-  Calendar
+  Calendar,
+  Landmark,
+  Briefcase
 } from 'lucide-react';
 import './App.css';
 
@@ -644,6 +646,31 @@ const TeamSection = () => {
     { icon: BarChart3, label: "100+ Transactions" },
   ];
 
+  // To add a team member: copy one block below, fill it in, and upload the
+  // photo to the /public folder in GitHub. Order here = order on the site.
+  const teamMembers = [
+    {
+      name: "Kiran Kumar Gowda N",
+      photo: "/kiran.png",
+      role: "Founder & Managing Advisor | Chartered Accountant",
+      linkedin: "https://linkedin.com/in/kirankrgn",
+      bio: "Kiran is a Chartered Accountant with 10+ years of post-qualification experience across Investment Banking, Transaction Advisory, and Corporate Strategy. He has advised startups and mid-market businesses on mergers and acquisitions, fundraising, financial due diligence, strategic finance, and CFO advisory mandates.",
+      highlights: achievements,
+    },
+    {
+      name: "Mahesh L",
+      photo: "/mahesh-l.webp",
+      role: "Lead – Debt Advisory Services",
+      linkedin: "", // paste Mahesh's LinkedIn URL here; the icon stays hidden while empty
+      bio: "Mahesh leads KeyFin's debt advisory practice, structuring and raising debt for real estate projects, including support on the statutory approvals needed to reach financial closure. He also heads debt syndication for MSME companies and project financing mandates.",
+      highlights: [
+        { icon: Building2, label: "Real Estate Debt" },
+        { icon: Landmark, label: "MSME Syndication" },
+        { icon: Briefcase, label: "Project Financing" },
+      ],
+    },
+  ];
+
   return (
     <section id="team" className="py-20 bg-champagne">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -663,57 +690,62 @@ const TeamSection = () => {
           </p>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto">
-          <motion.div
-            className="bg-white border border-charcoal-100 rounded-lg shadow-professional p-8 hover:shadow-elevated transition-all duration-300"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
-              <div className="flex-shrink-0">
-                <img
-                  src="/kiran.png"
-                  alt="Kiran Kumar Gowda N"
-                  className="w-36 h-36 rounded-full object-cover object-top shadow-elevated border-4 border-white"
-                />
-              </div>
-
-              <div className="flex-1 text-center md:text-left">
-                <div className="flex items-center justify-center md:justify-start gap-3 mb-1">
-                  <h3 className="text-2xl font-bold text-charcoal-900 font-serif">
-                    Kiran Kumar Gowda N
-                  </h3>
-                  <a 
-                    href="https://linkedin.com/in/kirankrgn"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-primary-600 hover:text-primary-700 transition-colors"
-                  >
-                    <Linkedin className="w-5 h-5" />
-                  </a>
+        <div className="max-w-4xl mx-auto space-y-8">
+          {teamMembers.map((member) => (
+            <motion.div
+              key={member.name}
+              className="bg-white border border-charcoal-100 rounded-lg shadow-professional p-8 hover:shadow-elevated transition-all duration-300"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
+                <div className="flex-shrink-0">
+                  <img
+                    src={member.photo}
+                    alt={member.name}
+                    className="w-36 h-36 rounded-full object-cover object-top shadow-elevated border-4 border-white"
+                  />
                 </div>
 
-                <p className="text-lg font-semibold text-primary-800 mb-4">
-                  Founder & Managing Advisor | Chartered Accountant
-                </p>
+                <div className="flex-1 text-center md:text-left">
+                  <div className="flex items-center justify-center md:justify-start gap-3 mb-1">
+                    <h3 className="text-2xl font-bold text-charcoal-900 font-serif">
+                      {member.name}
+                    </h3>
+                    {member.linkedin && (
+                      <a 
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary-600 hover:text-primary-700 transition-colors"
+                      >
+                        <Linkedin className="w-5 h-5" />
+                      </a>
+                    )}
+                  </div>
 
-                <p className="text-charcoal-600 leading-relaxed mb-6">
-                  Kiran is a Chartered Accountant with 10+ years of post-qualification experience across Investment Banking, Transaction Advisory, and Corporate Strategy. He has advised startups and mid-market businesses on mergers and acquisitions, fundraising, financial due diligence, strategic finance, and CFO advisory mandates.
-                </p>
+                  <p className="text-lg font-semibold text-primary-800 mb-4">
+                    {member.role}
+                  </p>
 
-                <div className="grid grid-cols-3 gap-6 text-center">
-                  {achievements.map((item, idx) => (
-                    <div key={idx} className="flex flex-col items-center">
-                      <item.icon className="w-7 h-7 text-charcoal-700 mb-2" />
-                      <span className="text-sm text-charcoal-600 font-medium">{item.label}</span>
-                    </div>
-                  ))}
+                  <p className="text-charcoal-600 leading-relaxed mb-6">
+                    {member.bio}
+                  </p>
+
+                  <div className="grid grid-cols-3 gap-6 text-center">
+                    {member.highlights.map((item, idx) => (
+                      <div key={idx} className="flex flex-col items-center">
+                        <item.icon className="w-7 h-7 text-charcoal-700 mb-2" />
+                        <span className="text-sm text-charcoal-600 font-medium">{item.label}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          ))}
         </div>
       </div>
     </section>
